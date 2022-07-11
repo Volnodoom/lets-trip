@@ -10,9 +10,9 @@
     <!-- add to header special infor about current page(DIRECTION) -->
     <header></header>
 
-    <main class="page-main">
-      <div class="page-main__about">
-        <h1 class="page-main__title title title--extra">Направления</h1>
+    <main class="page-main" id="#main">
+      <div class="page-main__about main-about">
+        <h1 class="main-about__title title title--extra">Направления</h1>
       </div>
 
       <section class="personal-info">
@@ -34,22 +34,22 @@
           <ul class="personal-info__list list-transport">
             <li class="list-transport__item">
               <input class="visually-hidden" type="checkbox" id="transport-plane" name="plane">
-              <label class="visually-hidden" for="transport-plane">Самолет</label>
+              <label class="transport-label" for="transport-plane" aria-label="Самолет"></label>
             </li>
 
             <li class="list-transport__item">
               <input class="visually-hidden" type="checkbox" id="transport-car" name="car">
-              <label class="visually-hidden" for="transport-car">Автомобиль</label>
+              <label class="transport-label" for="transport-car" aria-label="Автомобиль"></label>
             </li>
 
             <li class="list-transport__item">
               <input class="visually-hidden" type="checkbox" id="transport-cyclist" name="cyclist">
-              <label class="visually-hidden" for="transport-cyclist">Велосипед</label>
+              <label class="transport-label" for="transport-cyclist" aria-label="Велосипед"></label>
             </li>
 
             <li class="list-transport__item">
               <input class="visually-hidden" type="checkbox" id="transport-jogging" name="jogging">
-              <label class="visually-hidden" for="transport-jogging">Бег</label>
+              <label class="transport-label" for="transport-jogging" aria-label="Бег"></label>
             </li>
           </ul>
         </div>
@@ -655,18 +655,18 @@
               <div class="direction-plan__container">
                 <ul class="direction-plan__list list-direction">
                   <li class="list-direction__item item-direction">
-                    <button class="direction-plan__destination-button button button--profile">Босния и герцеговина</button>
+                    <button class="direction-plan__destination-button button button--profile" aria-expanded="false">Босния и Герцеговина</button>
                     <input name="direction-1" value="bosnia-and-herzegovina" type="hidden">
                     <!-- <div class="item-direction__decoration"></div> -->
                     <!-- we can use ::after to design decoration -->
                   </li>
                   <li class="list-direction__item">
-                    <button class="direction-plan__destination-button button button--profile">Чехия</button>
+                    <button class="direction-plan__destination-button button button--profile" aria-expanded="false">Чехия</button>
                     <input name="direction-2" value="czech" type="hidden">
                     <div class="item-direction__decoration"></div>
                   </li>
                   <li class="list-direction__item">
-                    <button class="direction-plan__destination-button button button--profile">выберите страну</button>
+                    <button class="direction-plan__destination-button button button--profile" aria-expanded="false">Выберите страну</button>
                   </li>
                   <li class="list-direction__item">
                     <button class="direction-plan__destination-button button button--profile">Добавить страну</button>
