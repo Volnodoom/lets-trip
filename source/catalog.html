@@ -916,7 +916,10 @@
         <div class="catalog__container">
           <article class="catalog__content content">
             <img class="content__image" src="" alt="">
-            <h2 class="content__title title title--content offline">Таня Фирсова</h2>
+            <h3 class="content__title title title--content">
+              <a class="content__link" href="#">Таня Фирсова</a>
+            </h3>
+            <span class="line-status line-status--offline visually-hidden">Оффлайн</span>
             <input class="visually-hidden" id="like-flag" name="user-like" type="checkbox" checked>
             <label class="content__likes" aria-label="Пользователям понравилось раз" for="like-flag">1,5 M</label>
             <p class="content__hash">#ЗОЖ #ПП #Фитнес #пляж  #авокадо #смузи</p>
@@ -925,9 +928,19 @@
               <span class="plan-content__text">Хочет посетить:</span>
               <ul class="plan-content__list list-content">
                 <li class="list-content__item">
-                  <span class="country-flag">Шри-Ланка</span>
-                  <span class="country-flag">Таиланд</span>
-                  <span class="country-flag">Сейшелы</span>
+                  <a class="list-content__link" href="#">
+                    <span class="country-flag">Шри-Ланка</span>
+                  </a>
+                </li>
+                <li class="list-content__item">
+                  <a class="list-content__link" href="#">
+                    <span class="country-flag">Таиланд</span>
+                  </a>
+                </li>
+                <li class="list-content__item">
+                  <a class="list-content__link" href="#">
+                    <span class="country-flag">Сейшелы</span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -958,7 +971,7 @@
               <span class="level-user__title">левел:</span>
               <span class="level-user__value">99</span>
             </div>
-            <button type="button" class="content__button button button--oval"></button>
+            <a class="content__button button button--oval" href="#"></a>
           </article>
         </div>
 
