@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Погнали. Профиль.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
+  </head>
+
+  <body>
+    <a class="visually-hidden" href="#main">Перейти к контенту</a>
+    <!-- add to header special infor about current page(DIRECTION) -->
+    <header></header>
+
+    <main class="page-main" id="#main">
+      <div class="page-main__about main-about">
+        <h1 class="main-about__title title title--extra">Направления</h1>
+      </div>
+
+      <section class="personal-info">
+        <div class="personal-info__container">
+          <h2 class="visually-hidden">Профиль пользователя</h2>
+          <div class="personal-info__level level-info">
+            <span class="visually-hidden">Твой уровень в приложении</span>
+            <span class="level-info__number">80</span>
+            <span class="level-info__text">level</span>
+          </div>
+
+          <img class="personal-info__avatar" src="" width="" height="" alt="Твоя фотография">
+          <button class="personal-info__button button button--oval">Сменить фото</button>
+
+          <label class="personal-info__tag title title--sub" for="tag-flag">ТЭГИ</label>
+          <textarea class="personal-info__tag-area" id="tag-flag" name="tag-area">#бургер #бар #футбол #концерт #крафт</textarea>
+
+          <h3 class="personal-info__title title title--sub">Транспорт</h3>
+          <ul class="personal-info__list list-transport">
+            <li class="list-transport__item">
+              <input class="visually-hidden" type="checkbox" id="transport-plane" name="plane">
+              <label class="transport-label" for="transport-plane" aria-label="Самолет"></label>
+            </li>
+
+            <li class="list-transport__item">
+              <input class="visually-hidden" type="checkbox" id="transport-car" name="car">
+              <label class="transport-label" for="transport-car" aria-label="Автомобиль"></label>
+            </li>
+
+            <li class="list-transport__item">
+              <input class="visually-hidden" type="checkbox" id="transport-cyclist" name="cyclist">
+              <label class="transport-label" for="transport-cyclist" aria-label="Велосипед"></label>
+            </li>
+
+            <li class="list-transport__item">
+              <input class="visually-hidden" type="checkbox" id="transport-jogging" name="jogging">
+              <label class="transport-label" for="transport-jogging" aria-label="Бег"></label>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="plan">
+        <div class="plan__container">
+          <h2 class="plan__title title">Мои планы:</h2>
+          <ol class="plan__number-list number-list-plan">
+            <li class="number-list-plan__item">
+              <h3><b>Франция, Италия</b></h3>
+
+              <ul class="number-list-plan__list list-plan-details">
+                <li class="list-plan-details__item">
+                  <p><span>3</span>Попутчика</p>
+                </li>
+
+                <li class="list-plan-details__item">
+                  <p><time datetime="2022-03-26">26 Мар</time> &mdash; <time datetime="2022-03-29">29 Мар</time></p>
+                </li>
+
+                <li class="list-plan-details__item">
+                  <a class="list-plan-details__button button button--no-border" href="blank.html">Изменить</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="number-list-plan__item">
+              <h3><b>Таиланд, Индонезия</b></h3>
+              <ul class="number-list-plan__list list-plan-details">
+                <li class="list-plan-details__item">
+                  <p><span></span></p>
+                </li>
+                <li class="list-plan-details__item">
+                  <p><time datetime="2022-07-01">26 Июл</time> &mdash; <time datetime="2022-07-15">15 Июл</time></p>
+                </li>
+                <li class="list-plan-details__item">
+                  <a class="list-plan-details__button button button--no-border" href="blank.html">Изменить</a>
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="add-plan">
+        <div class="add-plan__container">
+          <h2 class="add-plan__title title">Добавить план:</h2>
+          <div class="add-plan__progress progress-plan" aria-hidden="true">
+            <ul class="progress-plan__list list-plan-progress">
+              <li class="list-plan-progress__item list-plan-progress__item--current">Даты</li>
+
+              <li class="list-plan-progress__item">Маршрут</li>
+
+              <li class="list-plan-progress__item">Развлечения</li>
+            </ul>
+          </div>
+
+          <form class="add-plan__form form-plan" method="post">
+            <fieldset class="add-plan__date date-plan">
+            <legend class="form-plan__title title" id="date-flag">Шаг 1. Даты пребывания</legend>
+            <p class="form-plan__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+              <div class="date-plan__item-container">
+                <label class="date-plan__label" for="companions-counter">Ищу попутчиков:</label>
+
+                <button class="date-plan__button button button--no-border">
+                  <span class="visually-hidden">Уменьшить количество</span>
+                </button>
+
+                <input type="number" id="companions-counter" min="1" placeholder="2" required>
+                <p class="date-plan__measure">чел.</p>
+
+                <button class="date-plan__button button button--no-border">
+                  <span class="visually-hidden">Увеличить количество</span>
+                </button>
+              </div>
+
+              <div class="date-plan__item-container">
+                <label class="date-plan__label" for="time-frame-counter">длительность:</label>
+
+                <button class="date-plan__button button button--no-border">
+                  <span class="visually-hidden">Уменьшить количество</span>
+                </button>
+
+                <input type="number" id="time-frame-counter" min="1" placeholder="3" required>
+                <p class="date-plan__measure">дн.</p>
+
+                <button class="date-plan__button button button--no-border">
+                  <span class="visually-hidden">Увеличить количество</span>
+                </button>
+              </div>
+
+              <div class="date-plan__item-container">
+                <input type="checkbox" id="children-stay" name="children-stay">
+                <label for="children-stay">Можно с детьми</label>
+              </div>
+
+              <div class="date-plan__date-container">
+                <h3 class="title" id="table-lable"><time datetime="2022-03">Март 2022</time></h3>
+                <table class="date-plan__table table-form" aria-labelledby="table-lable" role="grid">
+                  <tbody>
+                    <tr class="table-form__head-row">
+                      <th class="table-form__head">
+                        П<span>н</span>
+                      </th>
+                      <th class="table-form__head">
+                        В<span>т</span>
+                      </th>
+                      <th class="table-form__head">
+                        С<span>р</span>
+                      </th>
+                      <th class="table-form__head">
+                        Ч<span>т</span>
+                      </th>
+                      <th class="table-form__head">
+                        П<span>т</span>
+                      </th>
+                      <th class="table-form__head">
+                        С<span>б</span>
+                      </th>
+                      <th class="table-form__head">
+                        В<span>с</span>
+                      </th>
+                    </tr>
+                    <!-- classes for label: .table-form__data .data-label--current .data-label--start .data-label--end .data-label--expired .data-label--upcoming -->
+                    <tr>
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-1" name="march-1">
+                        <label class="table-form__data data-label data-label--expired" for="march-1">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">1</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-2" name="march-2">
+                        <label class="table-form__data data-label data-label--expired" for="march-2">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">2</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-3" name="march-3">
+                        <label class="table-form__data data-label data-label--expired" for="march-3">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">3</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-4" name="march-4">
+                        <label class="table-form__data data-label data-label--expired" for="march-4">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">4</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-5" name="march-5">
+                        <label class="table-form__data data-label data-label--expired" for="march-5">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">5</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-6" name="march-6">
+                        <label class="table-form__data data-label data-label--expired" for="march-6">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">6</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-7" name="march-7">
+                        <label class="table-form__data data-label data-label--expired" for="march-7">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">7</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-8" name="march-8">
+                        <label class="table-form__data data-label data-label--expired" for="march-8">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">8</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-9" name="march-9">
+                        <label class="table-form__data data-label data-label--expired" for="march-9">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">9</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-10" name="march-10">
+                        <label class="table-form__data data-label data-label--expired" for="march-10">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">10</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-11" name="march-11">
+                        <label class="table-form__data data-label data-label--expired" for="march-11">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">11</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-12" name="march-12">
+                        <label class="table-form__data data-label data-label--expired" for="march-12">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">12</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-13" name="march-13">
+                        <label class="table-form__data data-label data-label--expired" for="march-13">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">13</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-14" name="march-14">
+                        <label class="table-form__data data-label data-label--expired" for="march-14">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">14</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-15" name="march-15">
+                        <label class="table-form__data data-label data-label--expired" for="march-15">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">15</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-16" name="march-16">
+                        <label class="table-form__data data-label data-label--expired" for="march-16">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">16</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-17" name="march-17">
+                        <label class="table-form__data data-label data-label--expired" for="march-17">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">17</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-18" name="march-18">
+                        <label class="table-form__data data-label data-label--expired" for="march-18">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">18</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-19" name="march-19">
+                        <label class="table-form__data data-label data-label--expired" for="march-19">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">19</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-20" name="march-20">
+                        <label class="table-form__data data-label data-label--expired" for="march-20">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">20</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-21" name="march-21">
+                        <label class="table-form__data data-label data-label--expired" for="march-21">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">21</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-22" name="march-22">
+                        <label class="table-form__data data-label data-label--expired" for="march-22">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">22</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-23" name="march-23">
+                        <label class="table-form__data data-label data-label--expired" for="march-23">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">23</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-24" name="march-24">
+                        <label class="table-form__data data-label data-label--expired" for="march-24">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">24</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-25" name="march-25">
+                        <label class="table-form__data data-label data-label--expired" for="march-25">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">25</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-26" name="march-26">
+                        <label class="table-form__data data-label data-label--start data-label--current" for="march-26">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">26</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-27" name="march-27">
+                        <label class="table-form__data data-label" for="march-27">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">27</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-28" name="march-28">
+                        <label class="table-form__data data-label data-label--end" for="march-28">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">28</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-29" name="march-29">
+                        <label class="table-form__data data-label data-label--upcoming" for="march-29">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">29</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-30" name="march-30">
+                        <label class="table-form__data data-label data-label--upcoming" for="march-30">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">30</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="march-31" name="march-31">
+                        <label class="table-form__data data-label data-label--upcoming" for="march-31">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">31</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-1" name="april-1">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-1">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">1</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-2" name="april-2">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-2">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">2</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-3" name="april-3">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-3">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">3</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-4" name="april-4">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-4">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">4</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-5" name="april-5">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-5">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">5</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-6" name="april-6">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-6">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">6</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-7" name="april-7">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-7">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">7</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-8" name="april-8">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-8">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">8</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-9" name="april-9">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-9">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">9</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-10" name="april-10">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-10">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">10</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-11" name="april-11">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-11">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">11</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-12" name="april-12">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-12">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">12</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-13" name="april-13">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-13">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">13</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-14" name="april-14">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-14">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">14</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-15" name="april-15">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-15">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">15</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-16" name="april-16">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-16">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">16</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-17" name="april-17">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-17">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">17</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+
+                      <td>
+                        <input class="visually-hidden" type="checkbox" id="april-18" name="april-18">
+                        <label class="table-form__data data-label data-label--upcoming" for="april-18">
+                          <span hidden>Заезд</span>
+                          <span class="data-label__true-date">18</span>
+                          <span hidden>Выезд</span>
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="add-plan__fieldset-footer">
+                <a class="add-plan__button button button--square" href="#direction-flag">Следующий шаг</a>
+              </div>
+            </fieldset>
+
+            <fieldset class="add-plan__direction direction-plan">
+              <legend class="form-plan__title title" id="direction-flag">Шаг 2. Маршрут</legend>
+              <p class="form-plan__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+
+              <div class="add-plan__progress progress-plan" aria-hidden="true">
+                <ul class="progress-plan__list list-plan-progress">
+                  <li class="list-plan-progress__item">Даты</li>
+
+                  <li class="list-plan-progress__item list-plan-progress__item--current">Маршрут</li>
+
+                  <li class="list-plan-progress__item">Развлечения</li>
+                </ul>
+              </div>
+
+              <div class="direction-plan__container">
+                <ul class="direction-plan__list list-direction">
+                  <li class="list-direction__item item-direction">
+                    <button class="direction-plan__destination-button button button--profile" aria-expanded="false">Босния и Герцеговина</button>
+                    <input name="direction-1" value="bosnia-and-herzegovina" type="hidden">
+                    <!-- <div class="item-direction__decoration"></div> -->
+                    <!-- we can use ::after to design decoration -->
+                  </li>
+                  <li class="list-direction__item">
+                    <button class="direction-plan__destination-button button button--profile" aria-expanded="false">Чехия</button>
+                    <input name="direction-2" value="czech" type="hidden">
+                    <div class="item-direction__decoration"></div>
+                  </li>
+                  <li class="list-direction__item">
+                    <button class="direction-plan__destination-button button button--profile" aria-expanded="false">Выберите страну</button>
+                  </li>
+                  <li class="list-direction__item">
+                    <button class="direction-plan__destination-button button button--profile">Добавить страну</button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="add-plan__modal-country modal-country">
+                <h3 class="modal-country__title title-modal">Выберите страну</h3>
+                <div class="modal-country__country-container">
+                  <div class="modal-country__alphabet alphabet-list">
+                    <h3 class="visually-hidden">Отфильтруйте страны по начальной букве</h3>
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-А" value="А">
+                    <label class="list-alphabet__item item-alphabet" for="буква-А">А</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-Б" value="Б">
+                    <label class="list-alphabet__item item-alphabet" for="буква-Б">Б</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-В" value="В">
+                    <label class="list-alphabet__item item-alphabet" for="буква-В">В</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-Г" value="Г">
+                    <label class="list-alphabet__item item-alphabet" for="буква-Г">Г</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-Д" value="Д">
+                    <label class="list-alphabet__item item-alphabet" for="буква-Д">Д</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-Е" value="Е">
+                    <label class="list-alphabet__item item-alphabet" for="буква-Е">Е</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-З" value="З">
+                    <label class="list-alphabet__item item-alphabet" for="буква-З">З</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-И" value="И">
+                    <label class="list-alphabet__item item-alphabet" for="буква-И">И</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-К" value="К">
+                    <label class="list-alphabet__item item-alphabet" for="буква-К">К</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-Л" value="Л">
+                    <label class="list-alphabet__item item-alphabet" for="буква-Л">Л</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-М" value="М">
+                    <label class="list-alphabet__item item-alphabet" for="буква-М">М</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-Н" value="Н">
+                    <label class="list-alphabet__item item-alphabet" for="буква-Н">Н</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-О" value="О">
+                    <label class="list-alphabet__item item-alphabet" for="буква-О">О</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-П" value="П">
+                    <label class="list-alphabet__item item-alphabet" for="буква-П">П</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-Р" value="Р">
+                    <label class="list-alphabet__item item-alphabet" for="буква-Р">Р</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-С" value="С">
+                    <label class="list-alphabet__item item-alphabet" for="буква-С">С</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-Т" value="Т">
+                    <label class="list-alphabet__item item-alphabet" for="буква-Т">Т</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-У" value="У">
+                    <label class="list-alphabet__item item-alphabet" for="буква-У">У</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-Ф" value="Ф">
+                    <label class="list-alphabet__item item-alphabet" for="буква-Ф">Ф</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-Х" value="Х">
+                    <label class="list-alphabet__item item-alphabet" for="буква-Х">Х</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-Ч" value="Ч">
+                    <label class="list-alphabet__item item-alphabet" for="буква-Ч">Ч</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-Ш" value="Ш">
+                    <label class="list-alphabet__item item-alphabet" for="буква-Ш">Ш</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-Э" value="Э">
+                    <label class="list-alphabet__item item-alphabet" for="буква-Э">Э</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-Ю" value="Ю">
+                    <label class="list-alphabet__item item-alphabet" for="буква-Ю">Ю</label>
+
+                    <input class="visually-hidden" type="radio" name="alphabet-choice" id="буква-Я" value="Я">
+                    <label class="list-alphabet__item item-alphabet" for="буква-Я">Я</label>
+                  </div>
+
+                  <div class="modal-country__country country-list">
+                    <input class="visually-hidden" id="flag-australia" name="country" value="australia" type="radio">
+                    <label class="country-list__label label-country" for="flag-australia">Австралия</label>
+
+                    <input class="visually-hidden" id="flag-austria" name="country" value="austria" type="radio">
+                    <label class="country-list__label label-country" for="flag-austria">Австрия</label>
+
+                    <input class="visually-hidden" id="flag-azerbaijan" name="country" value="azerbaijan" type="radio">
+                    <label class="country-list__label label-country" for="flag-azerbaijan">Азербайджан</label>
+
+                    <input class="visually-hidden" id="flag-albania" name="country" value="albania" type="radio">
+                    <label class="country-list__label label-country" for="flag-albania">Албания</label>
+
+                    <input class="visually-hidden" id="flag-algeria" name="country" value="algeria" type="radio">
+                    <label class="country-list__label label-country" for="flag-algeria">Алжир</label>
+
+                    <input class="visually-hidden" id="flag-angola" name="country" value="angola" type="radio">
+                    <label class="country-list__label label-country" for="flag-angola">Ангола</label>
+
+                    <input class="visually-hidden" id="flag-andorra" name="country" value="andorra" type="radio">
+                    <label class="country-list__label label-country" for="flag-andorra">Андорра</label>
+
+                    <input class="visually-hidden" id="flag-antigua-and-barbuda" name="country" value="antigua-and-barbuda" type="radio">
+                    <label class="country-list__label label-country" for="flag-antigua-and-barbuda">Антигуа и Барбуда</label>
+
+                    <input class="visually-hidden" id="flag-argentina" name="country" value="argentina" type="radio">
+                    <label class="country-list__label label-country" for="flag-argentina">Аргентина</label>
+
+                    <input class="visually-hidden" id="flag-armenia" name="country" value="armenia" type="radio">
+                    <label class="country-list__label label-country" for="flag-armenia">Армения</label>
+
+                    <input class="visually-hidden" id="flag-afghanistan" name="country" value="afghanistan" type="radio">
+                    <label class="country-list__label label-country" for="flag-afghanistan">Афганистан</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="add-plan__fieldset-footer">
+                <a class="add-plan__button button button--square" href="#entertainment-flag">Следующий шаг</a>
+                <a class="add-plan__button button button--no-border" href="#date-flag">На шаг назад</a>
+              </div>
+            </fieldset>
+
+            <fieldset class="add-plan__entertainment entertainment-plan">
+              <legend class="form-plan__title title" id="entertainment-flag">Шаг 3. Развлечения</legend>
+              <p class="form-plan__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+
+              <div class="add-plan__progress progress-plan" aria-hidden="true">
+                <ul class="progress-plan__list list-plan-progress">
+                  <li class="list-plan-progress__item">Даты</li>
+
+                  <li class="list-plan-progress__item">Маршрут</li>
+
+                  <li class="list-plan-progress__item list-plan-progress__item--current">Развлечения</li>
+                </ul>
+              </div>
+
+              <form class="entertainment-plan__form form-entertainment" action="post">
+                <!-- using pseudo elements of form-entertainment__item-container for decorations -->
+                <div class="form-entertainment__item-container">
+                  <label class="form-entertainment__label" for="entertainment-description-1">Босния и Герцеговина</label>
+                  <textarea class="form-entertainment__description" name="entertainment-description-1" id="entertainment-description-1" cols="30" rows="10" placeholder="План действий"></textarea>
+                </div>
+
+                <div class="form-entertainment__item-container">
+                  <label class="form-entertainment__label" for="entertainment-description-2">Чехия</label>
+                  <textarea class="form-entertainment__description" name="entertainment-description-2" id="entertainment-description-2" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                </div>
+
+                <div class="add-plan__fieldset-footer">
+                  <button class="add-plan__button button button--square" type="submit">Отправить</button>
+                  <a class="add-plan__button button button--no-border" href="#direction-flag">На шаг назад</a>
+                </div>
+              </form>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
