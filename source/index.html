@@ -2,46 +2,50 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Погнали. Главная страница.</title>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body>
     <a class="visually-hidden" href="#main">Перейти к контенту</a>
 
-    <header class="page-header">
-      <a class="page-header__logo">
-        <img class="logo" src="" width="" height="" alt="Логотип «Погнали»">
+    <header class="page-header page-header--expanded">
+      <a class="page-header__logo page-header__logo--light">
+        <img class="logo" src="./img/logo/logo-mobile.png" width="" height="" alt="Логотип «Погнали»">
+      </a>
+      <a class="page-header__logo page-header__logo--dark">
+        <img class="logo" src="./img/logo/logo-mobile-dark.png" width="" height="" alt="Логотип «Погнали»">
       </a>
 
-      <nav class="header-menu">
-        <button class="button header-menu__button" type="button" aria-expanded="false">
+      <nav class="page-header__menu header-menu">
+        <button class="button header-menu__button" type="button" aria-expanded="true">
           <span class="visually-hidden">Меню</span>
         </button>
         <div class="header-menu__container">
-          <ul class="header-menu__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="blank.html">О сервисе</a>
+          <ul class="header-menu__list">
+            <li class="header-menu__item">
+              <a class="header-menu__link link link--menu" href="blank.html">О сервисе</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Направления</a>
+            <li class="header-menu__item">
+              <a class="header-menu__link link link--menu" href="profile.html">Направления</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Попутчики</a>
+            <li class="header-menu__item">
+              <a class="header-menu__link link link--menu" href="catalog.html">Попутчики</a>
             </li>
           </ul>
 
-          <ul class="header-menu__list contact-list">
-            <li class="contact-list__item">
-              <a class="contact-list__link link--phone" href="tel:+79547080478">+7 954 708-04-78</a>
+          <ul class="header-menu__contacts">
+            <li class="header-menu__contacts-item">
+              <a class="header-menu__contacts-link link link--phone" href="tel:+79547080478">+7 954 708-04-78</a>
             </li>
-            <li class="contact-list__item">
-              <a class="contact-list__link link--mail" href="email:letstrip@tumbatumba.com"></a>
+            <li class="header-menu__contacts-item">
+              <a class="header-menu__contacts-link link link--mail" href="email:letstrip@tumbatumba.com"></a>
             </li>
           </ul>
 
@@ -70,7 +74,7 @@
       </nav>
     </header>
 
-    <main class="page-main" id="main">
+    <main class="page-main" hidden id="main">
       <h1 class="visually-hidden">Погнали — приложение для путешествия вместе с попутчиками</h1>
       <section class="welcome">
         <div class="welcome__container">
@@ -224,7 +228,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer" hidden>
       <div class="page-footer__container">
         <a class="page-footer__logo">
           <img class="logo" src="" alt="Логотип «Погнали»">
