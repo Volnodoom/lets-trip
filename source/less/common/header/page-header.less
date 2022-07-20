@@ -12,12 +12,14 @@
 
   background-color: @special-blue;
 
-  &.page-header--expanded {
+  &.page-header--expanded,
+  &.page-header__no-js {
   padding-top: 27px;
   }
 }
 
-.page-header--expanded {
+.page-header--expanded,
+.page-header__no-js {
   background-color: @basic-white;
 
   .page-header__logo {
@@ -51,12 +53,8 @@
   display: none;
 }
 
-
-// [aria-expanded="true"]
-
 .page-header__menu {
   margin: 0
-
 }
 
 

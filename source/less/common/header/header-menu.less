@@ -1,11 +1,15 @@
-.header-menu {
+.page-header--expanded,
+.page-header__no-js {
+  .header-menu {
   background-color: @basic-white;
+  }
 }
 
-.page-header:not(.page-header--expanded) .header-menu__button {
-  position: relative;
-  top: -6px;
-  left: 0;
+.page-header:not(.page-header--expanded) .header-menu__button,
+.page-header:not(.page-header__no-js) .header-menu__button {
+  position: absolute;
+  top: 19px;
+  right: 27px;
 
   width: 25px;
   height: 15px;
@@ -27,7 +31,7 @@
     height: 3px;
     background-color: @basic-white;
     border-radius: 3px;
-    border: 1px solid rgba(red, red, red, 0);
+    border: 1px solid transparent;
 
     box-shadow: 0 8px 0 0 @basic-white;
   }
@@ -60,7 +64,7 @@
 
     background-color: @basic-grey-light;
     border-radius: 3px;
-    border: 1px solid rgba(red, red, red, 0);
+    border: 1px solid transparent;
   }
 
   &::before {
@@ -76,19 +80,55 @@
   display: none;
 }
 
-.page-header--expanded .header-menu__container {
+.page-header--expanded .header-menu__container,
+.page-header__no-js .header-menu__container  {
   display: block;
+}
+
+.page-header__no-js .header-menu__button {
+  display: none;
 }
 
 .header-menu__list {
   padding: 0 15px;
   margin: 0;
+  margin-bottom: 51px;
 
   list-style: none;
 }
 
 .header-menu__item {
-  list-style: none;
   text-align: center;
 }
 
+.header-menu__user-button {
+  margin-bottom: 66px;
+}
+
+.header-menu__contacts {
+  padding: 0;
+  padding-left: 60px;
+  padding-right: 20px;
+  margin: 0;
+  margin-bottom: 53px;
+
+  list-style: none;
+}
+
+.header-menu__contacts-item {
+  margin-bottom: 27px;
+}
+
+.header-menu__socials {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0 auto;
+  margin-bottom: 41px;
+  padding: 0;
+
+  width: 105px;
+  height: 21px;
+
+  list-style: none;
+}
