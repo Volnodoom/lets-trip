@@ -14,20 +14,21 @@
 
   <body>
     <a class="visually-hidden" href="#main">Перейти к контенту</a>
-
+    <!-- header class could accept two extra classes  page-header--expanded and page-header__no-js -->
     <header class="page-header">
-      <a class="page-header__logo page-header__logo--light">
-        <img class="logo" src="./img/logo/logo-mobile.png" width="" height="" alt="Логотип «Погнали»">
-      </a>
-      <a class="page-header__logo page-header__logo--dark">
-        <img class="logo" src="./img/logo/logo-mobile-dark.png" width="" height="" alt="Логотип «Погнали»">
-      </a>
+      <div class="page-header__container">
+        <a class="page-header__logo page-header__logo--light">
+          <img class="logo" src="./img/logo/logo-mobile.png" width="" height="" alt="Логотип «Погнали»">
+        </a>
+        <a class="page-header__logo page-header__logo--dark">
+          <img class="logo" src="./img/logo/logo-mobile-dark.png" width="" height="" alt="Логотип «Погнали»">
+        </a>
 
-      <nav class="page-header__menu header-menu">
-        <button class="button header-menu__button" type="button" aria-expanded="true">
-          <span class="visually-hidden">Меню</span>
-        </button>
-        <div class="header-menu__container">
+        <nav class="page-header__menu header-menu">
+          <button class="header-menu__button" type="button" aria-expanded="true">
+            <span class="visually-hidden">Меню</span>
+          </button>
+
           <ul class="header-menu__list">
             <li class="header-menu__item">
               <a class="link link--menu" href="blank.html">О сервисе</a>
@@ -40,18 +41,19 @@
             </li>
           </ul>
 
-          <button class="header-menu__user-button button button--oval" type="button">Авторизация</button>
+          <a class="header-menu__user-button button button--oval" href="blank.html">Авторизация</a>
 
-          <span class="visually-hidden">Контакты</span>
+          <span class="visually-hidden">Контакты организации</span>
           <ul class="header-menu__contacts">
             <li class="header-menu__contacts-item">
-              <a class="link link--contacts" href="tel:+79547080478">+7 954 708-04-78</a>
+              <a class="link link--contacts" href="tel:+79547080478"><span class="span-data">+7 954 708-04-78</span></a>
             </li>
             <li class="header-menu__contacts-item">
-              <a class="link link--contacts" href="mailto:letstrip@tumbatumba.com">letstrip@tumbatumba.com</a>
+              <a class="link link--contacts" href="mailto:letstrip@tumbatumba.com"><span class="span-data">letstrip@tumbatumba.com</span></a>
             </li>
           </ul>
 
+          <span class="visually-hidden">Мы в социальных сетях</span>
           <ul class="header-menu__socials">
             <li class="header-menu__socials-item">
               <a class="link link--social link--facebook" href="#">
@@ -69,8 +71,9 @@
               </a>
             </li>
           </ul>
-        </div>
-      </nav>
+
+        </nav>
+      </div>
     </header>
 
     <main class="page-main" hidden id="main">

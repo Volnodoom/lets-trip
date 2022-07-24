@@ -1,0 +1,89 @@
+.size(@w; @h) when not (ispercentage(@w)) and (ispercentage(@h)) {
+  @width: @w;
+  width: ~"@{width}px";
+  height: @h;
+}
+
+.size(@w; @h) when not (ispercentage(@h)) and (ispercentage(@w))  {
+  @height: @h;
+  width: @w;
+  height: ~"@{height}px";
+}
+
+.size(@w; @h) when (ispercentage(@w)) and (ispercentage(@h)) {
+  width: @w;
+  height: @h;
+}
+
+
+.size(@w; @h) when (not(ispercentage(@w)) and not(ispercentage(@h))) {
+  @width: @w;
+  @height: @h;
+  width: ~"@{width}px";
+  height: ~"@{height}px";
+}
+
+.font-params(@size; @line-heigh) {
+  @size-font: @size;
+  @height-font: @line-heigh;
+  font-size: ~"@{size-font}px";
+  line-height: ~"@{height-font}px";
+}
+
+.font-params(@size; @line-heigh; @weight) {
+  @size-font: @size;
+  @height-font: @line-heigh;
+  @weight-font: @weight;
+  font-size: ~"@{size-font}px";
+  line-height: ~"@{height-font}px";
+  font-weight: ~"@{weight-font}px";
+}
+
+.reset() {
+  margin: 0;
+  padding: 0;
+}
+
+.create-pseudo(@position) {
+  content: "";
+  position: @position;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.create-pseudo(@position; right) {
+  top: 0;
+  right: 0;
+}
+
+.create-pseudo(@position; left) {
+  top: 0;
+  left: 0;
+}
+
+.create-pseudo(@position; bottomRight) {
+  bottom: 0;
+  right: 0;
+}
+
+.create-pseudo(@position; bottomLeft) {
+  bottom: 0;
+  left: 0;
+}
+
+.create-pseudo(@position; @_) {
+  content: "";
+  position: @position;
+}
+
+
+.create-pseudo(@position; @top; @right; @bottom; @left) {
+  content: "";
+  position: @position;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+}
