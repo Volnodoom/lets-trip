@@ -33,10 +33,9 @@
 .font-params(@size; @line-heigh; @weight) {
   @size-font: @size;
   @height-font: @line-heigh;
-  @weight-font: @weight;
   font-size: ~"@{size-font}px";
   line-height: ~"@{height-font}px";
-  font-weight: ~"@{weight-font}px";
+  font-weight: @weight;
 }
 
 .reset() {

@@ -41,7 +41,7 @@
             </li>
           </ul>
 
-          <a class="header-menu__user-button button button--oval" href="blank.html">Авторизация</a>
+          <a class="header-menu__user-button button button--oval-nav" href="blank.html">Авторизация</a>
 
           <span class="visually-hidden">Контакты организации</span>
           <ul class="header-menu__contacts">
@@ -76,40 +76,42 @@
       </div>
     </header>
 
-    <main class="page-main" hidden id="main">
+    <main class="page-main" id="main">
       <h1 class="visually-hidden">Погнали — приложение для путешествия вместе с попутчиками</h1>
       <section class="welcome">
         <div class="welcome__container">
-          <h2 class="welcome__title title title--extra">В путешествие с крутыми попутчиками!</h2>
-          <img src="" width="" height="" alt="Молодой человек стоит с чемоданом и ждет">
+          <h2 class="welcome__title title title--extra">В&nbsp;путешествие с&nbsp;крутыми попутчиками!</h2>
+          <img class="welcome__img" src="" width="192" height="255" alt="Молодой человек стоит с чемоданом и ждет">
 
-          <ul class="welcome__list list-interaction">
-            <li class="list-interaction__item">
-              <button class="list-interaction__button button--square" type="button">Авторизация</button>
-            </li>
-            <li class="list-interaction__item">
-              <a class="list-interaction__link list-interaction__link--mobile" href="tel:+79547080478"></a>
-            </li>
-            <li class="list-interaction__item">
-              <a class="list-interaction__link list-interaction__link--modern-mail" href="email:letstrip@tumbatumba.com"></a>
-            </li>
-          </ul>
+          <div class="welcome__interaction-container">
+            <button class="welcome__button button button--oval" type="button">Авторизация</button>
+            <ul class="welcome__list list-interaction">
+              <li class="list-interaction__item">
+                <span class="visually-hidden">Телефон организации</span>
+                <a class="list-interaction__link list-interaction__link--mobile" href="tel:+79547080478"></a>
+              </li>
+              <li class="list-interaction__item">
+                <span class="visually-hidden">Почта организации</span>
+                <a class="list-interaction__link list-interaction__link--modern-mail" href="email:letstrip@tumbatumba.com"></a>
+              </li>
+            </ul>
+          </div>
 
           <div class="welcome__promo-container">
             <q class="welcome__quote">Лучшее приложение, что я видел в жизни!</q>
-            <cite class="welcome__reference">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+            <cite class="welcome__reference">Мурат Эльтазин<br>главный редактор газеты «гаджетлайф»</cite>
           </div>
 
-          <ol class="welcome__number-list list-action">
-            <li class="list-action__item">Выберите направление</li>
-            <li class="list-action__item">Изучите идеи путешественников</li>
-            <li class="list-action__item">Находите тех, кто похож на вас</li>
-            <li class="list-action__item">Путешествуйте вместе!</li>
+          <ol class="welcome__number-list">
+            <li class="welcome__number-item">Выберите <br>направление</li>
+            <li class="welcome__number-item">Изучите идеи <br>путешественников</li>
+            <li class="welcome__number-item">Находите тех, <br>кто похож на вас</li>
+            <li class="welcome__number-item">Путешествуйте <br>вместе!</li>
           </ol>
         </div>
       </section>
 
-      <section class="about-service">
+      <section class="about-service" hidden>
         <div class="about-service__container">
           <h2 class="title">О сервисе</h2>
           <p>Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих. <b>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b></p>
@@ -118,7 +120,7 @@
         </div>
       </section>
 
-      <section class="destination">
+      <section class="destination" hidden>
         <div class="destination__container">
           <h2 class="title">Направления</h2>
           <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
@@ -151,7 +153,7 @@
         </div>
       </section>
 
-      <section class="companion">
+      <section class="companion" hidden>
         <div class="companion__container">
           <h2 class="title">Попутчики</h2>
           <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга</p>
@@ -162,7 +164,7 @@
         </div>
       </section>
 
-      <section class="rates">
+      <section class="rates" hidden>
         <div class="rates__container">
           <h2 class="title">Добавьте свой профиль</h2>
 
@@ -195,7 +197,7 @@
           <button class="rates__button rates__button--close button" type="button">Закрыть окно</button>
         </div>
       </section>
-      <section class="register">
+      <section class="register" hidden>
         <h2 class="title">Заинтересовались?</h2>
         <p>Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее</p>
 
@@ -215,7 +217,7 @@
         </ul>
       </section>
 
-      <section class="map-scheme">
+      <section class="map-scheme" hidden>
         <div class="map-scheme__container">
           <h2 class="title">проспект Руставели 1, Батуми, Грузия</h2>
           <button class="map-scheme__button button button--square">Проложить маршрут</button>
