@@ -16,7 +16,7 @@
     padding-bottom: 72px;
 
     .page-header__container {
-      width: 688px;
+      width: 100%;
       margin: 0 auto;
     }
   }
@@ -29,7 +29,7 @@
     width: 100%;
 
     .page-header__container {
-      width: 1324px;
+      width: @fixed-desktop-screen;
       display: flex;
     }
 
@@ -149,10 +149,6 @@
       display: flex;
       flex-wrap: wrap;
     }
-
-    .header-menu__user-button {
-      display: block;
-    }
   }
 }
 
@@ -166,7 +162,6 @@
 
   @media (min-width: @desktop-width) {
     .header-menu__list,
-    .header-menu__user-button,
     .header-menu__contacts,
     .header-menu__socials {
       display: flex;
@@ -216,6 +211,12 @@
 
     @media (min-width: @desktop-width) {
       display: none;
+    }
+  }
+
+  .header-menu__user-button {
+    @media(min-width: @tablet-width) and (max-width: @tablet-width-only) {
+      font-weight: 400;
     }
   }
 }

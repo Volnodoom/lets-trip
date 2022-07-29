@@ -78,11 +78,18 @@
 }
 
 
-.create-pseudo(@position; @top; @right; @bottom; @left) {
+.create-pseudo(@position; @top; @right; @bottom; @left) when(isnumber(@top)) {
   content: "";
   position: @position;
   top: @top;
   right: @right;
   bottom: @bottom;
   left: @left;
+}
+
+.create-pseudo(@position; @side; @value; @side2; @value2) when(iskeyword(@side)) {
+  content: "";
+  position: @position;
+  @{side}: if(isunit(@value, "%"), @value, ~"@{value}px");
+  @{side2}: if(isunit(@value2, "%"), @value2, ~"@{value2}px");
 }

@@ -5,5 +5,13 @@
   &--extra {
     .font-params(36; 40);
     color: @basic-white;
+
+    @media(min-width: @tablet-width) {
+      .font-params(60; 70);
+    }
+
+    @media(min-width: @desktop-width) {
+      text-align: start;
+    }
   }
 }
