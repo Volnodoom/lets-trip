@@ -78,11 +78,9 @@
 
     <main class="page-main" id="main">
       <h1 class="visually-hidden">Погнали — приложение для путешествия вместе с попутчиками</h1>
-      <div class="page-main__container">
         <section class="welcome">
           <div class="welcome__container">
             <h2 class="welcome__title title title--extra">В&nbsp;путешествие с&nbsp;крутыми попутчиками!</h2>
-            <img class="welcome__img" src="" width="192" height="255" alt="Молодой человек стоит с чемоданом и ждет">
 
             <div class="welcome__interaction-container">
               <button class="welcome__button button button--oval" type="button">Авторизация</button>
@@ -112,49 +110,51 @@
           </div>
         </section>
 
-      </div>
+        <section class="about-service">
+          <div class="about-service__container">
+            <h2 class="about-service__title title title--main-page">О сервисе</h2>
+            <p class="about-service__content">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+              <b class="about-service__bold">А если найдете кого-то близкого по духу &mdash; скорее зовите в совместный трип!</b>
+            </p>
+            <img class="about-service__product" src="" width="376" height="548" alt="Два скриншота работающего приложения. 3/5 размера карточки занимает аватар, 2/5 текст: имя пользователя, описание увлечений, кнопка позвать и количество лайков.">
+            <a class="about-service__button button button--square" href="blank.html">Подробнее</a>
+          </div>
+        </section>
 
-      <section class="about-service" hidden>
-        <div class="about-service__container">
-          <h2 class="title">О сервисе</h2>
-          <p>Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих. <b>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b></p>
-          <img class="about-servic__product" src="" width="" height="" alt="Два скриншота работающего приложения. 3/5 размера карточки занимает авата, 2/5 текст: имя пользователя, описание увлечений, кнопка позвать и количество лайков.">
-          <button class="about-servic__button button button--square" type="button"></button>
-        </div>
-      </section>
-
-      <section class="destination" hidden>
-        <div class="destination__container">
-          <h2 class="title">Направления</h2>
-          <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-          <ul class="destination__list list-places">
-            <li class="list-places__item item-place">
-              <h3><b>Таиланд</b></h3>
-              <img class="item-place__flag" src="" width="" height="" alt="Флаг Таиланда. Полосы горизонтальные: красный, белый, синий, белый, красный.">
-              <img class="item-place__photo" src="" width="" height="" alt="Белый безлюдный песчаный пляж, изумрудная вода и два громадных камня высотой с пятиэтажный дом покрытые зеленной растительностью.">
-              <p class="item-place__text">Джунгли зовут!</p>
-              <p class="item-place__text"><span class="visually-hidden">Количество путешественников: </span>18321</p>
-            </li>
-
+        <section class="destination">
+          <div class="destination__container">
+            <h2 class="destination__title">Направления</h2>
+            <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+            <ul class="destination__list list-places">
               <li class="list-places__item item-place">
-              <h3><b>Франция</b></h3>
-              <p class="item-place__text">Трэ бьен, манифик!</p>
-              <p class="item-place__text"><span class="visually-hidden">Количество путешественников: </span>12518</p>
-              <img class="item-place__flag" src="" width="" height="" alt="Флаг Франции. Полосы вертикальные: синий, белый, красный.">
-              <img class="item-place__photo" src="" width="" height="" alt="Уютная безлюдная улочка днем. Слевой стороны дома 20-го века строительства.">
-            </li>
+                <h3><b>Таиланд</b></h3>
+                <img class="item-place__flag" src="" width="" height="" alt="Флаг Таиланда. Полосы горизонтальные: красный, белый, синий, белый, красный.">
+                <img class="item-place__photo" src="" width="" height="" alt="Белый безлюдный песчаный пляж, изумрудная вода и два громадных камня высотой с пятиэтажный дом покрытые зеленной растительностью.">
+                <p class="item-place__text">Джунгли зовут!</p>
+                <p class="item-place__text"><span class="visually-hidden">Количество путешественников: </span>18321</p>
+              </li>
 
-              <li class="list-places__item item-place">
-              <h3><b>Чехия</b></h3>
-              <p class="item-place__text">Закоулки старой Европы</p>
-              <p class="item-place__text"><span class="visually-hidden">Количество путешественников: </span>5326</p>
-              <img class="item-place__flag" src="" width="" height="" alt="Флаг Чехии. Треугольник равносторонний с основанием по вертикали синего цвета на 2/5 флага, а затем по горизонтали белая и красная полоса.">
-              <img class="item-place__photo" src="" width="" height="" alt="На заднем фоне старинный пражский мост. На переднем фоне река с экскурсионным судном.">
-            </li>
-          </ul>
-          <button class="destination__button button button--square" type="button">Показать все</button>
-        </div>
-      </section>
+                <li class="list-places__item item-place">
+                <h3><b>Франция</b></h3>
+                <p class="item-place__text">Трэ бьен, манифик!</p>
+                <p class="item-place__text"><span class="visually-hidden">Количество путешественников: </span>12518</p>
+                <img class="item-place__flag" src="" width="" height="" alt="Флаг Франции. Полосы вертикальные: синий, белый, красный.">
+                <img class="item-place__photo" src="" width="" height="" alt="Уютная безлюдная улочка днем. Слевой стороны дома 20-го века строительства.">
+              </li>
+
+                <li class="list-places__item item-place">
+                <h3><b>Чехия</b></h3>
+                <p class="item-place__text">Закоулки старой Европы</p>
+                <p class="item-place__text"><span class="visually-hidden">Количество путешественников: </span>5326</p>
+                <img class="item-place__flag" src="" width="" height="" alt="Флаг Чехии. Треугольник равносторонний с основанием по вертикали синего цвета на 2/5 флага, а затем по горизонтали белая и красная полоса.">
+                <img class="item-place__photo" src="" width="" height="" alt="На заднем фоне старинный пражский мост. На переднем фоне река с экскурсионным судном.">
+              </li>
+            </ul>
+            <button class="destination__button button button--square" type="button">Показать все</button>
+          </div>
+        </section>
+
+
 
       <section class="companion" hidden>
         <div class="companion__container">
