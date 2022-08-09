@@ -25,6 +25,16 @@
   --button-vertical-padding: 12px;
   --button-horizontal-padding: 30px;
 
+  &--small {
+    --button-vertical-padding: 22px;
+    --button-horizontal-padding: 23px;
+  }
+
+  &--medium {
+    --button-vertical-padding: 28px;
+    --button-horizontal-padding: 32px;
+  }
+
   &--oval-nav {
     .font-params(17; 30; 700);
     @media(min-width: @tablet-width) {
@@ -45,15 +55,20 @@
   }
 
   &--square {
-    --button-vertical-padding: 28px;
-    --button-horizontal-padding: 32px;
-
     position: relative;
+    padding-right: 60px;
+    border-radius: 10px;
 
-    .font-params(24; 24; 700);
+    .font-params(18; 18; 700);
+
     text-align: start;
     text-transform: none;
-    padding-right: 65px;
+
+    @media(min-width: @tablet-width) {
+      border-radius: 20px;
+
+      .font-params(24; 24);
+    }
 
     &::after {
       position: absolute;

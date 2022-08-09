@@ -1,0 +1,26 @@
+.text {
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.3;
+
+  &--destination {
+    color: @basic-grey;
+    line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    .font-params(20; 20);
+  }
+  }
+
+  &--number {
+    color: @basic-blue;
+    line-height: 20px;
+    .font-params(20; 20);
+  }
+}
+
+.text__basic-main-page {
+  @media (min-width: @tablet-width) {
+    .font-params(28; 33);
+  }
+}
