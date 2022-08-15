@@ -1,3 +1,13 @@
+.mobile-padding() {
+  --button-vertical-padding: 22px;
+  --button-horizontal-padding: 23px;
+}
+
+.non-mobile-padding() {
+  --button-vertical-padding: 28px;
+  --button-horizontal-padding: 32px;
+}
+
 .button {
   display: block;
 
@@ -25,16 +35,6 @@
   --button-vertical-padding: 12px;
   --button-horizontal-padding: 30px;
 
-  &--small {
-    --button-vertical-padding: 22px;
-    --button-horizontal-padding: 23px;
-  }
-
-  &--medium {
-    --button-vertical-padding: 28px;
-    --button-horizontal-padding: 32px;
-  }
-
   &--oval-nav {
     .font-params(17; 30; 700);
     @media(min-width: @tablet-width) {
@@ -56,6 +56,7 @@
 
   &--square {
     position: relative;
+    .mobile-padding();
     padding-right: 60px;
     border-radius: 10px;
 
@@ -67,17 +68,21 @@
     @media(min-width: @tablet-width) {
       border-radius: 20px;
 
+      .non-mobile-padding();
+      padding-right: 60px;
+
       .font-params(24; 24);
     }
 
     &::after {
-      position: absolute;
-      content: "";
+      .create-pseudo(absolute; top; 24; right; 23);
       .triangle-box-right(14; 7);
-      top: ~"calc(41%)";
-      right: 36px;
       margin-left: auto;
 
+      @media(min-width: @tablet-width) {
+        top: 33px;
+        right: 35px;
+      }
     }
   }
 }

@@ -90,8 +90,8 @@
 .create-pseudo(@position; @side; @value; @side2; @value2) when(iskeyword(@side)) {
   content: "";
   position: @position;
-  @{side}: if(isunit(@value, "%"), @value, ~"@{value}px");
-  @{side2}: if(isunit(@value2, "%"), @value2, ~"@{value2}px");
+  @{side}: if(isunit(@value, "%") or isstring(@value), @value, ~"@{value}px");
+  @{side2}: if(isunit(@value2, "%") or isstring(@value2), @value2, ~"@{value2}px");
 }
 
 .set-padding-box() {
@@ -160,18 +160,26 @@
   border-right-style: none;
 }
 
-.triangle-box-top(@size; @sub-size) {
-  .triangle(top; ~"@{size}px"; ~"@{sub-size}px"; @special-blue);
+.triangle-box-top(@size; @sub-size; @color: @special-blue) {
+  .triangle(top; ~"@{size}px"; ~"@{sub-size}px"; @color);
 }
 
-.triangle-box-right(@size; @sub-size) {
-  .triangle(right; ~"@{size}px"; ~"@{sub-size}px"; @special-blue);
+.triangle-box-right(@size; @sub-size; @color: @special-blue) {
+  .triangle(right; ~"@{size}px"; ~"@{sub-size}px"; @color);
 }
 
-.triangle-box-bottom(@size; @sub-size) {
-  .triangle(bottom; ~"@{size}px"; ~"@{sub-size}px"; @special-blue);
+.triangle-box-bottom(@size; @sub-size; @color: @special-blue) {
+  .triangle(bottom; ~"@{size}px"; ~"@{sub-size}px"; @color);
 }
 
-.triangle-box-left(@size; @sub-size) {
-  .triangle(left; ~"@{size}px"; ~"@{sub-size}px"; @special-blue);
+.triangle-box-left(@size; @sub-size; @color: @special-blue) {
+  .triangle(left; ~"@{size}px"; ~"@{sub-size}px"; @color);
+}
+
+.set-desktop-grid() {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 285px);
+    column-gap: @desktop-grid-gap;
+  }
 }

@@ -117,7 +117,7 @@
               <b class="about-service__bold">А если найдете кого-то близкого по духу &mdash; скорее зовите в совместный трип!</b>
             </p>
             <img class="about-service__product" src="" width="376" height="548" alt="Два скриншота работающего приложения. 3/5 размера карточки занимает аватар, 2/5 текст: имя пользователя, описание увлечений, кнопка позвать и количество лайков.">
-            <a class="about-service__button button button--square button--medium" href="blank.html">Подробнее</a>
+            <a class="about-service__button button button--square" href="blank.html">Подробнее</a>
           </div>
         </section>
 
@@ -158,19 +158,163 @@
               </li>
             </ul>
 
-            <button class="destination__button button button--square button--small" type="button">Показать все</button>
+            <button class="destination__button button button--square" type="button">Показать все</button>
           </div>
         </section>
 
-
-
-      <section class="companion" hidden>
+      <section class="companion">
         <div class="companion__container">
-          <h2 class="title">Попутчики</h2>
-          <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга</p>
-          <b>Теперь можно легко найти единомышленников!</b>
-          <img class="companion__product" src="" width="" height="" alt="Карточка профиля в приложении. На аватаре представлена девушка плавающая на спине по лазурному морю. Уровень пользователя 99.">
-          <img class="companion__product" src="" width="" height="" alt="Карточка профиля в приложении. На аватаре представлен мужчина. Одетый в легкую одежду, хота на улице зима, тем самым он показывает на сколько он крут.">
+          <div class="companion__content-info">
+            <h2 class="companion__title title title--main-page">Попутчики</h2>
+            <p class="companion__text text__basic-main-page">Все мы индивидуальны и у каждого <br class="companion__brake">свой взгляд на идеальный отдых. <br class="companion__brake">Одному нужен пляж и коктейль, <br class="companion__brake">а другому маршрут для хайкинга.
+              <span class="companion__bold-text">Теперь можно легко найти <br class="companion__brake">единомышленников!</span>
+            </p>
+          </div>
+
+          <ul class="companion__list">
+            <li class="companion__item item-user">
+              <div class="item-user__container">
+                <h3 class="item-user__name title title--companion" aria-label="офлайн">
+                  <a class="item-user__user-link user user--offline" href="#">Таня Фирсова</a>
+                </h3>
+                <h4 class="visually-hidden">Список стран</h4>
+                <ul class="item-user__country-list">
+                  <li class="item-user__country-item tooltip tooltip--top">
+                    <span class="tooltip__content tooltip__content--top">Шри-Ланка</span>
+                  </li>
+
+                  <li class="item-user__country-item tooltip tooltip--top">
+                    <span class="tooltip__content tooltip__content--top">Тайланд</span>
+                  </li>
+
+                  <li class="item-user__country-item tooltip tooltip--top">
+                    <span class="tooltip__content tooltip__content--top">Сейшелы</span>
+                  </li>
+                </ul>
+
+                <h4 class="visually-hidden">Список хэштегов</h4>
+                <ul class="item-user__hash-list">
+                  <li class="item-user-hash-item">
+                    <a class="item-user__hash-link" href="blank.html">#ЗОЖ</a>
+                  </li>
+
+                  <li class="item-user-hash-item">
+                    <a class="item-user__hash-link" href="blank.html">#ПП</a>
+                  </li>
+
+                  <li class="item-user-hash-item">
+                    <a class="item-user__hash-link" href="blank.html">#Фитнес</a>
+                  </li>
+
+                  <li class="item-user-hash-item">
+                    <a class="item-user__hash-link" href="blank.html">#пляж</a>
+                  </li>
+
+                  <li class="item-user-hash-item">
+                    <a class="item-user__hash-link" href="blank.html">#авокадо</a>
+                  </li>
+
+                  <li class="item-user-hash-item">
+                    <a class="item-user__hash-link" href="blank.html">#смузи</a>
+                  </li>
+                </ul>
+
+                <h4 class="visually-hidden">Пользователь предпочитает передвижении</h4>
+                <ul class="item-user__transport-list">
+                  <li class="item-user__transport-item tooltip tooltip--top transport transport--selected transport--fly" aria-label="Авиаперелёт выбран">
+                    <span class="tooltip__content tooltip__content--top">Авиаперелёт</span>
+                  </li>
+                  <li class="item-user__transport-item tooltip tooltip--top transport transport--bus" aria-label="Автотранспорт">
+                    <span class="tooltip__content tooltip__content--top">Автотранспорт</span>
+                  </li>
+                  <li class="item-user__transport-item tooltip tooltip--top transport transport--cycle" aria-label="Велосипед">
+                    <span class="tooltip__content tooltip__content--top">Велосипед</span>
+                  </li>
+                  <li class="item-user__transport-item tooltip tooltip--top transport transport--walk" aria-label="Ходьба">
+                    <span class="tooltip__content tooltip__content--top">Ходьба</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="item-user__user-level" hidden>
+                <span class="visually-hidden">Уровень пользователя в приложении</span>
+                <span class="level-info__number">99</span>
+                <span class="level-info__text">level</span>
+              </div>
+
+              <a class="item-user__photo-link" href="#">
+                <img class="item-user__photo" width="270" height="270" src="./img/thailand-mobile 1.png" alt="Девушка плавающая на спине по лазурному морю.">
+              </a>
+            </li>
+
+            <li class="companion__item item-user">
+              <div class="item-user__container">
+                <h3 class="item-user__name title title--companion" aria-label="онлайн">
+                  <a class="item-user__user-link user user--online" href="#">Петя Демин</a>
+                </h3>
+                <h4 class="visually-hidden">Страны</h4>
+                <ul class="item-user__country-list">
+                  <li class="item-user__country-item tooltip tooltip--top">
+                    <span class="tooltip__content tooltip__content--top">Германия</span>
+                  </li>
+
+                  <li class="item-user__country-item tooltip tooltip--top">
+                    <span class="tooltip__content tooltip__content--top">Чехия</span>
+                  </li>
+                </ul>
+
+                <h4 class="visually-hidden">Список хэштегов</h4>
+                <ul class="item-user__hash-list">
+                  <li class="item-user-hash-item">
+                    <a class="item-user__hash-link" href="blank.html">#бургер</a>
+                  </li>
+
+                  <li class="item-user-hash-item">
+                    <a class="item-user__hash-link" href="blank.html">#бар</a>
+                  </li>
+
+                  <li class="item-user-hash-item">
+                    <a class="item-user__hash-link" href="blank.html">#футбол</a>
+                  </li>
+
+                  <li class="item-user-hash-item">
+                    <a class="item-user__hash-link" href="blank.html">#концерт</a>
+                  </li>
+
+                  <li class="item-user-hash-item">
+                    <a class="item-user__hash-link" href="blank.html">#крафт</a>
+                  </li>
+                </ul>
+
+                <h4 class="visually-hidden">Пользователь предпочитает передвижении</h4>
+                <ul class="item-user__transport-list">
+                  <li class="item-user__transport-item tooltip tooltip--top transport transport--selected transport--fly" aria-label="Авиаперелёт выбран">
+                    <span class="tooltip__content tooltip__content--top">Авиаперелёт</span>
+                  </li>
+                  <li class="item-user__transport-item tooltip tooltip--top transport transport--bus" aria-label="Автотранспорт">
+                    <span class="tooltip__content tooltip__content--top">Автотранспорт</span>
+                  </li>
+                  <li class="item-user__transport-item tooltip tooltip--top transport transport--selected transport--cycle" aria-label="Велосипед выбран">
+                    <span class="tooltip__content tooltip__content--top">Велосипед</span>
+                  </li>
+                  <li class="item-user__transport-item tooltip tooltip--top transport transport--selected transport--walk" aria-label="Ходьба выбрана">
+                    <span class="tooltip__content tooltip__content--top">Ходьба</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="item-user__user-level" hidden>
+                <span class="visually-hidden">Уровень пользователя в приложении</span>
+                <span class="level-info__number">99</span>
+                <span class="level-info__text">level</span>
+              </div>
+
+              <a class="item-user__photo-link" href="#">
+                <img class="item-user__photo" width="270" height="270" src="./img/thailand-mobile 1.png" alt="Мужчина, одетый в легкую одежду, хота на улице зима. Этой фотографией передается брутальность пользователя.">
+              </a>
+            </li>
+          </ul>
+
           <button class="companion__button button button--square" type="button">Показать все</button>
         </div>
       </section>

@@ -1,0 +1,44 @@
+.user {
+  position: relative;
+
+
+  &--offline {
+    &::before {
+      background-color: @basic-red;
+    }
+  }
+
+  &--online {
+    &::before {
+      background-color: @basic-fresh-green;
+    }
+  }
+
+  &::before {
+    .create-pseudo(absolute; top; ~"calc(50% - 3px)"; left; -10);
+    transform: translateX(-50%);
+    display: block;
+    .size(6; 6);
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      .size(8; 8);
+      left: -14px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+  }
+}

@@ -1,0 +1,63 @@
+.tooltip {
+  position: relative;
+
+  @media (any-hover: hover) {
+    &:hover {
+      .tooltip__content {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (any-hover: hover) {
+  .tooltip--top {
+    &:hover {
+      &::before {
+        .create-pseudo(absolute; top; -14; left; 50%);
+        transform: translateX(-50%);
+        .triangle-box-bottom(10; 8; @basic-blue);
+      }
+    }
+  }
+
+  .tooltip--left {
+    &:hover {
+      &::before {
+        .create-pseudo(absolute; left; -14; top; 50%);
+        transform: translateY(-50%);
+        .triangle-box-right(10; 8; @basic-blue);
+      }
+    }
+  }
+}
+
+.tooltip__content {
+  display: none;
+  position: absolute;
+  padding: 18px 22px;
+  max-width: 165px;
+
+  border-radius: 4px;
+  background-color: @basic-blue;
+
+  color: @basic-white;
+  .font-params(20; 20; 400);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &--top {
+    top: calc(-13px - 56px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--left {
+    left: -13px;
+    top: 50%;
+    transform: translate(-100%, -50%);
+  }
+
+
+}
