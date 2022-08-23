@@ -100,16 +100,24 @@
   @{side2}: if(isunit(@value2, "%") or isstring(@value2), @value2, ~"@{value2}px");
 }
 
-.set-padding-box() {
+.set-starting-section() {
+  position: relative;
+
   padding: 0 25px;
+  margin-top: -30px;
   width: 100%;
+
+  border-radius: 0 0 30px 30px;
 
   @media(min-width: @tablet-width) {
     padding: 0 40px;
+    margin-top: -60px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    border-radius: 0 0 60px 60px;
   }
 
   @media(min-width: @desktop-width) {
