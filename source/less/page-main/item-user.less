@@ -1,4 +1,6 @@
 .item-user {
+  position: relative;
+
   overflow: hidden;
   border-radius: 10px;
 
@@ -36,33 +38,9 @@
 }
 
 .item-user__user-link {
-  .reset();
-  cursor: pointer;
-  text-decoration: none;
-
-  border-radius: 10px;
-
-  &:link {
-    color: @special-blue;
-  }
-
-  &:visited {
-    color: @special-blue;
-  }
-
-  &:focus {
-    outline: @special-blue solid 1px;
-  }
-
-  @media (any-hover: hover) {
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
+  margin: 0;
+  // padding for border when element are focused
+  padding: 0 5px;
 }
 
 .item-user__country-list {
@@ -152,6 +130,12 @@
 .item-user__transport-item {
   .size(21; 21);
   background-color: fuchsia;
+}
+
+.item-user__user-level {
+  .position-element(absolute; top; 17; left; 17);
+  .size(60; 60);
+  z-index: 1000;
 }
 
 .item-user__photo-link {

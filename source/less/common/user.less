@@ -1,7 +1,6 @@
 .user {
   position: relative;
 
-
   &--offline {
     &::before {
       background-color: @basic-red;
@@ -15,7 +14,8 @@
   }
 
   &::before {
-    .create-pseudo(absolute; top; ~"calc(50% - 3px)"; left; -10);
+    // left moved 5px less because padding of 5 px for element`s focus state
+    .create-pseudo(absolute; top; ~"calc(50% - 3px)"; left; -5);
     transform: translateX(-50%);
     display: block;
     .size(6; 6);
@@ -23,7 +23,7 @@
 
     @media (min-width: @tablet-width) {
       .size(8; 8);
-      left: -14px;
+      left: -9px;
     }
 
     &:focus {

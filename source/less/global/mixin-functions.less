@@ -94,6 +94,12 @@
   @{side2}: if(isunit(@value2, "%") or isstring(@value2), @value2, ~"@{value2}px");
 }
 
+.position-element(@position; @side; @value; @side2; @value2) when(iskeyword(@side)) {
+  position: @position;
+  @{side}: if(isunit(@value, "%") or isstring(@value), @value, ~"@{value}px");
+  @{side2}: if(isunit(@value2, "%") or isstring(@value2), @value2, ~"@{value2}px");
+}
+
 .set-padding-box() {
   padding: 0 25px;
   width: 100%;
@@ -182,4 +188,10 @@
     grid-template-columns: repeat(4, 285px);
     column-gap: @desktop-grid-gap;
   }
+}
+
+.limit-text() {
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
 }
