@@ -86,3 +86,38 @@
     }
   }
 }
+
+
+.button__one-line {
+  display: block;
+  .reset();
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  .limit-text();
+
+  &--rates {
+    color: @special-blue-light-10;
+    .font-params(16; 16; 700);
+
+    @media(min-width: @tablet-width) {
+      .font-params(20; 20);
+    }
+  }
+
+  &--business {
+    color: @special-blue;
+    .font-params(16; 24; 700);
+    text-transform: uppercase;
+
+    @media(min-width: @tablet-width) {
+      font-size: 24px;
+      text-transform: none;
+    }
+  }
+}

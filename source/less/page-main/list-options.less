@@ -1,0 +1,139 @@
+.list-options {
+  @media(min-width: @tablet-width) {
+    .font-params(28; 28);
+
+    &::after {
+      .create-pseudo(absolute; top; -41; right; 0);
+      display: block;
+      .size(198; ~"calc(100% + 86px)");
+
+      z-index: 100;
+
+      border-radius: 20px;
+      background-color: @basic-blue-saturate-20;
+    }
+  }
+
+  @media(min-width: @desktop-width) {
+    &::after {
+      top: -51px;
+      right: 111px;
+      .size(446; ~"calc(100% + 102px)");
+    }
+  }
+}
+
+.list-options__wrapper {
+  counter-increment: new-counter;
+  position: relative;
+
+  @media(min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 400px 163px;
+  }
+
+  @media(min-width: @desktop-width) {
+    grid-template-columns: 528px 285px;
+  }
+
+  &:first-child {
+    &::before {
+      .create-rate-section-line(absolute; left);
+    }
+  }
+
+  @media(min-width: @tablet-width) {
+    &:last-child {
+      &::before {
+        .create-rate-section-line(absolute; bottomLeft);
+      }
+    }
+  }
+
+  &:nth-of-type(3n+1) {
+    &::after{
+      background-color: @basic-orange;
+    }
+  }
+
+  &:nth-of-type(3n+2) {
+    &::after{
+      background-color: @basic-yellow-dark;
+    }
+  }
+
+  &:nth-of-type(3n+3) {
+    &::after{
+      background-color: @basic-yellow;
+    }
+  }
+
+  &::after {
+    .create-pseudo(absolute; top; 14; left; 211);
+    transform: translateY(-5px);
+    padding-top: 10px;
+
+    display: block;
+    .size(34; 34);
+    border-radius: 50%;
+
+    color: @basic-white;
+    text-align: center;
+    content: counter(new-counter);
+    .font-params(16; 16; 400);
+
+    @media(min-width: @tablet-width) {
+      top: 50%;
+      transform: translateY(-50%);
+      left: -90px;
+
+      .size(68; 68);
+      padding-top: 21px;
+
+      .font-params(28; 28);
+    }
+  }
+}
+
+.list-options__term,
+.list-options__definition {
+  .reset();
+  color: @basic-grey;
+}
+
+.list-options__term {
+  position: relative;
+  padding-top: 14px;
+
+  @media(min-width: @tablet-width) {
+    padding: 22px 0 18px;
+  }
+
+  @media(min-width: @tablet-width) {
+    &::before {
+      .create-rate-section-line(absolute; left);
+    }
+  }
+}
+
+.list-options__definition {
+  position: relative;
+  padding-bottom: 16px;
+
+  @media(min-width: @tablet-width) {
+    padding: 22px 0 18px;
+
+    text-align: right;
+    z-index: 1000;
+  }
+
+  &::after {
+    .create-rate-section-line(absolute; bottomLeft);
+
+    @media(min-width: @tablet-width) {
+      display: none;
+    }
+  }
+}
+
+

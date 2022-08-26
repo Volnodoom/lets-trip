@@ -350,37 +350,48 @@
 
       <section class="rates">
         <div class="rates__container">
-          <h2 class="title">Добавьте свой профиль</h2>
+          <h2 class="rates__title title title--main-page">Добавьте свой профиль</h2>
 
           <dl class="rates__list list-options">
-            <dt class="list-options__term">Базовое размещение</dt>
-            <dd class="list-options__definition">Бесплатно</dd>
-            <dt class="list-options__term">Вывод на первых позициях</dt>
-            <dd class="list-options__definition">99 руб./мес</dd>
-            <dt class="list-options__term">Кастомный цвет карточки</dt>
-            <dd class="list-options__definition">59 руб./мес</dd>
+            <div class="list-options__wrapper">
+              <dt class="list-options__term">Базовое размещение</dt>
+              <dd class="list-options__definition">Бесплатно</dd>
+            </div>
+            <div class="list-options__wrapper">
+              <dt class="list-options__term">Вывод на первых позициях</dt>
+              <dd class="list-options__definition">99 руб./мес</dd>
+            </div>
+            <div class="list-options__wrapper">
+              <dt class="list-options__term">Кастомный цвет карточки</dt>
+              <dd class="list-options__definition">59 руб./мес</dd>
+            </div>
           </dl>
 
-          <button class="rates__button rates__button--open button" type="button" aria-expanded="false">Показать тарифы для бизнеса</button>
-        </div>
+          <button class="rates__button-open button__one-line button__one-line--rates" type="button">Показать тарифы для бизнеса</button>
 
-        <div class="rates__popup popup-rates">
-          <h2 class="title">Бизнес-тарифы</h2>
+          <!-- To show modal window need to switch modal class to modal__active -->
+          <div class="rates__modal" role="dialog" aria-labelledby="dialog-title" aria-modal="false">
+            <div class="modal__overlay"></div>
+            <div class="rates__modal-container">
+              <h2 class="rates__modal-title title title--main-page" id="dialog-title">Бизнес-тарифы</h2>
 
-          <dl class="popup-rates__list list-business-option">
-            <dt class="list-business-option__term">Реклама у блоггера</dt>
-            <dd class="list-business-option__definition">300 000 руб./пост</dd>
-            <dt class="list-business-option__term">Накрутка подписчиков</dt>
-            <dd class="list-business-option__definition">от 1 руб./шт.</dd>
-            <dt class="list-business-option__term">Лайки от ботов</dt>
-            <dd class="list-business-option__definition">от 20 коп./лайк</dd>
-            <dt class="list-business-option__term">Ваш продакт-плейсмент</dt>
-            <dd class="list-business-option__definition">Индивидуально</dd>
-          </dl>
+              <dl class="rates__modal-list list-options">
+                <dt class="list-options__term">Реклама у блоггера</dt>
+                <dd class="list-options__definition">300 000 руб./пост</dd>
+                <dt class="list-options__term">Накрутка подписчиков</dt>
+                <dd class="list-options__definition">от 1 руб./шт.</dd>
+                <dt class="list-options__term">Лайки от ботов</dt>
+                <dd class="list-options__definition">от 20 коп./лайк</dd>
+                <dt class="list-options__term">Ваш продакт-плейсмент</dt>
+                <dd class="list-options__definition">Индивидуально</dd>
+              </dl>
 
-          <button class="rates__button rates__button--close button" type="button">Закрыть окно</button>
+              <button class="rates__button-close button__one-line button__one-line--business" type="button">Закрыть окно</button>
+            </div>
+          </div>
         </div>
       </section>
+
       <section class="register" hidden>
         <h2 class="title">Заинтересовались?</h2>
         <p>Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее</p>

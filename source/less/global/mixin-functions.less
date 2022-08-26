@@ -1,40 +1,16 @@
-.size(@w; @h) when not (ispercentage(@w)) and (ispercentage(@h)) {
-  @width: @w;
-  width: ~"@{width}px";
-  height: @h;
-}
-
-.size(@w; @h) when not (ispercentage(@h)) and (ispercentage(@w))  {
-  @height: @h;
-  width: @w;
-  height: ~"@{height}px";
-}
-
-.size(@w; @h) when (ispercentage(@w)) and (ispercentage(@h)) {
-  width: @w;
-  height: @h;
-}
-
-
-.size(@w; @h) when (not(ispercentage(@w)) and not(ispercentage(@h))) {
-  @width: @w;
-  @height: @h;
-  width: ~"@{width}px";
-  height: ~"@{height}px";
+.size(@w; @h) {
+  width: if(isunit(@w, "%") or iskeyword(@w) or isunit(@w, px) or isstring(@w), @w, ~"@{w}px");
+  height: if(isunit(@h, "%") or iskeyword(@h) or isunit(@h, px) or isstring(@h), @h, ~"@{h}px");
 }
 
 .font-params(@size; @line-heigh) {
-  @size-font: @size;
-  @height-font: @line-heigh;
-  font-size: ~"@{size-font}px";
-  line-height: ~"@{height-font}px";
+  font-size: if(isunit(@size, px), @size, ~"@{size}px");
+  line-height: if(isunit(@line-heigh, px), @line-heigh, ~"@{line-heigh}px");
 }
 
 .font-params(@size; @line-heigh; @weight) {
-  @size-font: @size;
-  @height-font: @line-heigh;
-  font-size: ~"@{size-font}px";
-  line-height: ~"@{height-font}px";
+  font-size: if(isunit(@size, px), @size, ~"@{size}px");
+  line-height: if(isunit(@line-heigh, px), @line-heigh, ~"@{line-heigh}px");
   font-weight: @weight;
 }
 
@@ -100,7 +76,7 @@
   @{side2}: if(isunit(@value2, "%") or isstring(@value2), @value2, ~"@{value2}px");
 }
 
-.set-starting-section() {
+.set-starting-section(@z-position; @frame-color: @basic-blue) {
   position: relative;
 
   padding: 0 25px;
@@ -108,6 +84,8 @@
   width: 100%;
 
   border-radius: 0 0 30px 30px;
+  z-index: @z-position;
+  background-color: @frame-color;
 
   @media(min-width: @tablet-width) {
     padding: 0 40px;
@@ -202,4 +180,21 @@
   overflow: hidden;
   text-overflow: clip;
   white-space: nowrap;
+}
+
+.set-focus-style-by-area(@radius: 3px; @thick: 2px) {
+  border-radius: @radius;
+  outline-offset: @radius;
+  outline: @special-blue solid @thick;
+}
+
+.set-focus-style-by-contour(@thick: 2px) {
+  outline: @special-blue solid @thick;
+}
+
+.create-rate-section-line(@position; @orientation) {
+  .create-pseudo(@position; @orientation);
+  display: block;
+  .size(100%; 1);
+  background-color: @basic-blue-light-20;
 }

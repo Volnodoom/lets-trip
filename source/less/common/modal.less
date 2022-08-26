@@ -1,0 +1,18 @@
+.modal__inactive {
+  display: none;
+}
+
+.modal__overlay {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  .size(100%; 100%);
+  overflow: hidden;
+  z-index: 100;
+
+  background-color: @basic-black;
+  opacity: 0.6;
+
+  cursor: pointer;
+}
