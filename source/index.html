@@ -381,7 +381,9 @@
 
           <form class="register__form" action="post">
             <input class="register__input" type="email" placeholder="E-mail" aria-label="email" required>
-            <button class="register__button" type="submit" aria-label="Отправить"></button>
+            <button class="register__button" type="submit">
+              <span class="register__button-description">Регистрация</span>
+            </button>
           </form>
 
           <p class="register__text">
@@ -400,18 +402,21 @@
         </div>
       </section>
 
-      <section class="map-scheme" hidden>
-        <div class="map-scheme__container">
+      <section class="address" hidden>
+        <div class="address__container">
           <h2 class="title">проспект Руставели 1, Батуми, Грузия</h2>
-          <button class="map-scheme__button button button--square">Проложить маршрут</button>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1772.5842774043108!2d41.635777342833215!3d41.65315939676512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4067864730b1dcd5%3A0x39f194c59b736d82!2sBatumi%20Drama%20Theatre!5e0!3m2!1sen!2sru!4v1657383297931!5m2!1sen!2sru"
-            width="600"
-            height="450"
-            loading="lazy"
-            >
-          </iframe>
+          <button class="address__button button button--square">Проложить маршрут</button>
         </div>
+      </section>
+
+      <section class="map-scheme" hidden>
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1772.5842774043108!2d41.635777342833215!3d41.65315939676512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4067864730b1dcd5%3A0x39f194c59b736d82!2sBatumi%20Drama%20Theatre!5e0!3m2!1sen!2sru!4v1657383297931!5m2!1sen!2sru"
+        width="600"
+        height="450"
+        loading="lazy"
+        >
+        </iframe>
       </section>
 
       <!-- To show modal window need to switch modal class to modal__active -->
