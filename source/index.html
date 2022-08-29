@@ -46,10 +46,10 @@
           <span class="visually-hidden">Контакты организации</span>
           <ul class="header-menu__contacts">
             <li class="header-menu__contacts-item">
-              <a class="link link--contacts" href="tel:+79547080478"><span class="span-data">+7 954 708-04-78</span></a>
+              <a class="link link--contacts" href="tel:+79547080478">+7 954 708-04-78</a>
             </li>
             <li class="header-menu__contacts-item">
-              <a class="link link--contacts" href="mailto:letstrip@tumbatumba.com"><span class="span-data">letstrip@tumbatumba.com</span></a>
+              <a class="link link--contacts" href="mailto:letstrip@tumbatumba.com">letstrip@tumbatumba.com</a>
             </li>
           </ul>
 
@@ -367,49 +367,37 @@
             </div>
           </dl>
 
+          <!-- click on this button add class to modal window -->
           <button class="rates__button-open button__one-line button__one-line--rates" type="button">Показать тарифы для бизнеса</button>
-
-          <!-- To show modal window need to switch modal class to modal__active -->
-          <div class="rates__modal" role="dialog" aria-labelledby="dialog-title" aria-modal="false">
-            <div class="modal__overlay"></div>
-            <div class="rates__modal-container">
-              <h2 class="rates__modal-title title title--main-page" id="dialog-title">Бизнес-тарифы</h2>
-
-              <dl class="rates__modal-list list-options">
-                <dt class="list-options__term">Реклама у блоггера</dt>
-                <dd class="list-options__definition">300 000 руб./пост</dd>
-                <dt class="list-options__term">Накрутка подписчиков</dt>
-                <dd class="list-options__definition">от 1 руб./шт.</dd>
-                <dt class="list-options__term">Лайки от ботов</dt>
-                <dd class="list-options__definition">от 20 коп./лайк</dd>
-                <dt class="list-options__term">Ваш продакт-плейсмент</dt>
-                <dd class="list-options__definition">Индивидуально</dd>
-              </dl>
-
-              <button class="rates__button-close button__one-line button__one-line--business" type="button">Закрыть окно</button>
-            </div>
-          </div>
         </div>
       </section>
 
-      <section class="register" hidden>
-        <h2 class="title">Заинтересовались?</h2>
-        <p>Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее</p>
+      <section class="register">
+        <div class="register__container">
+          <h2 class="register__title title title--main-page">Заинтересовались?</h2>
+          <p class="register__text">Зарегистрируйтесь, это&nbsp;быстро&nbsp;и&nbsp;бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее
+            <a class="register__authorize" href="blank.html">авторизуйтесь.</a>
+          </p>
 
-        <form class="register__form" action="post">
-          <input type="email" aria-label="E-mail" placeholder="E-mail" required>
-          <button class="button register__button" type="submit"></button>
-          <p>Остались вопросы? Мы с радостью на них ответим!</p>
-        </form>
+          <form class="register__form" action="post">
+            <input class="register__input" type="email" placeholder="E-mail" aria-label="email" required>
+            <button class="register__button" type="submit" aria-label="Отправить"></button>
+          </form>
 
-        <ul class="register__list list-register">
-          <li class="list-register__item">
-            <a class="list-register__link link--phone" href="tel:+79547080478">+7 954 708-04-78</a>
-          </li>
-          <li class="list-register__item">
-            <a class="list-register__link link--mail" href="email:letstrip@tumbatumba.com"></a>
-          </li>
-        </ul>
+          <p class="register__text">
+            <span class="register__sub-text">Остались вопросы?</span>
+          Мы с радостью на них ответим!
+          </p>
+
+          <ul class="register__list">
+            <li class="register__list-item">
+              <a class="register__list-link link--phone" href="tel:+79547080478">+7 954 708-04-78</a>
+            </li>
+            <li class="register__list-item">
+              <a class="register__list-link link--mail" href="email:letstrip@tumbatumba.com">letstrip@tumbatumba.com</a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="map-scheme" hidden>
@@ -425,6 +413,27 @@
           </iframe>
         </div>
       </section>
+
+      <!-- To show modal window need to switch modal class to modal__active -->
+      <div class="modal-rates" role="dialog" aria-labelledby="dialog-title" aria-modal="false">
+        <div class="modal__overlay"></div>
+        <div class="modal-rates__container">
+          <h2 class="modal-rates__title title title--main-page" id="dialog-title">Бизнес-тарифы</h2>
+
+          <dl class="modal-rates__list list-options">
+            <dt class="list-options__term">Реклама у блоггера</dt>
+            <dd class="list-options__definition">300 000 руб./пост</dd>
+            <dt class="list-options__term">Накрутка подписчиков</dt>
+            <dd class="list-options__definition">от 1 руб./шт.</dd>
+            <dt class="list-options__term">Лайки от ботов</dt>
+            <dd class="list-options__definition">от 20 коп./лайк</dd>
+            <dt class="list-options__term">Ваш продакт-плейсмент</dt>
+            <dd class="list-options__definition">Индивидуально</dd>
+          </dl>
+
+          <button class="rates__button-close button__one-line button__one-line--business" type="button">Закрыть окно</button>
+        </div>
+      </div>
     </main>
 
     <footer class="page-footer" hidden>
