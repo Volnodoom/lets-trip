@@ -84,6 +84,20 @@
         right: 35px;
       }
     }
+
+    &:active::after {
+      border-left-color: rgba(29, 46, 91, 0.3);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: @basic-yellow-dark;
+      }
+    }
+
+    &:active {
+      color: rgba(29, 46, 91, 0.3);
+    }
   }
 }
 
