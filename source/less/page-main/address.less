@@ -1,0 +1,123 @@
+.address {
+  .set-starting-section(500; @basic-yellow);
+  padding-top: 61px;
+  padding-bottom: 35px;
+
+  color: @special-blue;
+
+  @media(min-width: @tablet-width) {
+    padding-top: 130px;
+    padding-bottom: 84px;
+  }
+
+  @media(min-width: @desktop-width) {
+    padding-top: 105px;
+    padding-bottom: 56px;
+  }
+
+}
+
+.address__container {
+  .set-cross-platform-limits();
+  margin: 0 auto;
+
+  @media(min-width: @tablet-width) {
+    padding: 0 35px;
+  }
+
+  @media(min-width: @desktop-width) {
+    padding: 0 75px 0 223px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.address__title {
+  position: relative;
+  width: 165px;
+  margin: 0 0 32px 60px;
+
+  @media(min-width: @tablet-width) {
+    width: auto;
+    margin: 0 0 62px 94px;
+  }
+
+  @media(min-width: @desktop-width) {
+    margin: 0;
+    padding: 32px 15px 30px 121px;
+  }
+
+  &::before {
+    .create-pseudo(absolute; top; 50%; left; -60);
+    transform: translateY(-50%);
+    display: block;
+    .size(45; 45);
+
+    border-radius: 50%;
+    background-color: @special-blue;
+
+    @media(min-width: @tablet-width) {
+      left: -94px;
+      .size(68; 68);
+    }
+
+    @media(min-width: @desktop-width) {
+      left: 0;
+      .size(90; 90);
+    }
+  }
+}
+
+.address__title-style {
+  .font-params(16; 22);
+
+  @media(min-width: @tablet-width) {
+    .font-params(28; 28);
+  }
+}
+
+.address__button {
+  padding: 22px;
+  padding-right: 40px;
+  .size(100%; 62);
+
+  border: 3px solid @special-blue;
+  color: @special-blue;
+  .font-params(18; 18);
+
+  @media(min-width: @tablet-width) {
+    .size(618; 80);
+    padding: 29px 65px 27px 37px;
+
+    .font-params(24; 24);
+  }
+
+  @media(min-width: @desktop-width) {
+    padding: 5px 60px 5px 36px;
+    .size(324; 80);
+
+    &::after {
+      top: 30px;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: @basic-blue;
+      color: @basic-white;
+
+      &::after {
+        border-left-color: @basic-white;
+      }
+    }
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    &::after {
+      border-left-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
