@@ -14,19 +14,82 @@
 
   <body>
     <a class="visually-hidden" href="#main">Перейти к контенту</a>
-    <!-- header class could accept two extra classes  page-header--expanded and page-header__no-js -->
-    <header class="page-header">
+    <!-- header class could accept two extra classes page-header--expanded or page-header__no-js -->
+    <header class="page-header page-header--expanded">
       <div class="page-header__container">
         <a class="page-header__logo page-header__logo--light">
-          <img class="logo" src="./img/logo/logo-mobile.png" width="" height="" alt="Логотип «Погнали»">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              type="image/webp"
+              srcset="./img/content/logo/logo-desktop-light.webp 1x, ./img/content/logo/logo-desktop-light@2.webp 2x"
+            >
+            <source
+              media="(min-width: 1440px)"
+              srcset="./img/content/logo/logo-desktop-light.png 1x, ./img/content/logo/logo-desktop-light@2.png 2x"
+            >
+            <source
+              media="(min-width: 768px)"
+              type="image/webp"
+              srcset="./img/content/logo/logo-tablet-light.webp 1x, ./img/content/logo/logo-tablet-light@2.webp 2x"
+            >
+            <source
+              media="(min-width: 768px)"
+              srcset="./img/content/logo/logo-tablet-light.png 1x, ./img/content/logo/logo-tablet-light@2.png 2x"
+            >
+            <source
+              media="(min-width: 320px)"
+              type="image/webp"
+              srcset="./img/content/logo/logo-mobile-light.webp 1x, ./img/content/logo/logo-mobile-light@2.webp 2x"
+            >
+            <img
+              class="logo"
+              src="./img/content/logo/logo-mobile-light.png"
+              srcset="./img/content/logo/logo-mobile-light@2.png 2x"
+              width="96"
+              height="15"
+              alt="Логотип «Погнали»">
+          </picture>
         </a>
         <a class="page-header__logo page-header__logo--dark">
-          <img class="logo" src="./img/logo/logo-mobile-dark.png" width="" height="" alt="Логотип «Погнали»">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              type="image/webp"
+              srcset="./img/content/logo/logo-desktop-dark.webp 1x, ./img/content/logo/logo-desktop-dark@2.webp 2x"
+            >
+            <source
+              media="(min-width: 1440px)"
+              srcset="./img/content/logo/logo-desktop-dark.png 1x, ./img/content/logo/logo-desktop-dark@2.png 2x"
+            >
+            <source
+              media="(min-width: 768px)"
+              type="image/webp"
+              srcset="./img/content/logo/logo-tablet-dark.webp 1x, ./img/content/logo/logo-tablet-dark@2.webp 2x"
+            >
+            <source
+              media="(min-width: 768px)"
+              srcset="./img/content/logo/logo-tablet-dark.png 1x, ./img/content/logo/logo-tablet-dark@2.png 2x"
+            >
+            <source
+              media="(min-width: 320px)"
+              type="image/webp"
+              srcset="./img/content/logo/logo-mobile-dark.webp 1x, ./img/content/logo/logo-mobile-dark@2.webp 2x"
+            >
+            <img
+              class="logo"
+              src="./img/content/logo/logo-mobile-dark.png"
+              srcset="./img/content/logo/logo-mobile-dark@2.png 2x"
+              width="100"
+              height="15"
+              alt="Логотип «Погнали»">
+          </picture>
         </a>
 
         <nav class="page-header__menu header-menu">
-          <button class="header-menu__button" type="button" aria-expanded="true">
+          <button class="header-menu__button" type="button" aria-expanded="false">
             <span class="visually-hidden">Меню</span>
+            <span class="header-menu__button-interactive-area"></span>
           </button>
 
           <ul class="header-menu__list">
@@ -58,10 +121,14 @@
           <span class="visually-hidden">Контакты организации</span>
           <ul class="header-menu__contacts">
             <li class="header-menu__contacts-item">
-              <a class="link link--contacts" href="tel:+79547080478">+7 954 708-04-78</a>
+              <a class="link link--contacts" href="tel:+79547080478">
+                <span class="header-menu__contacts-info">+7 954 708-04-78</span>
+              </a>
             </li>
             <li class="header-menu__contacts-item">
-              <a class="link link--contacts" href="mailto:letstrip@tumbatumba.com">letstrip@tumbatumba.com</a>
+              <a class="link link--contacts" href="mailto:letstrip@tumbatumba.com">
+                <span class="header-menu__contacts-info">letstrip@tumbatumba.com</span>
+              </a>
             </li>
           </ul>
 
@@ -97,13 +164,13 @@
             <div class="welcome__interaction-container">
               <button class="welcome__button button button--oval" type="button">Авторизация</button>
               <ul class="welcome__list list-interaction">
-                <li class="list-interaction__item">
+                <li class="welcome__list-item">
                   <span class="visually-hidden">Телефон организации</span>
-                  <a class="list-interaction__link list-interaction__link--mobile" href="tel:+79547080478"></a>
+                  <a class="welcome__list-link welcome__list-link--mobile" href="tel:+79547080478"></a>
                 </li>
-                <li class="list-interaction__item">
+                <li class="welcome__list-item">
                   <span class="visually-hidden">Почта организации</span>
-                  <a class="list-interaction__link list-interaction__link--modern-mail" href="email:letstrip@tumbatumba.com"></a>
+                  <a class="welcome__list-link welcome__list-link--modern-mail" href="email:letstrip@tumbatumba.com"></a>
                 </li>
               </ul>
             </div>
@@ -459,7 +526,38 @@
       <div class="page-footer__container">
         <div class="page-footer__logo-container">
           <a class="page-footer__logo">
-            <img class="logo" src="./img/logo/logo-mobile-dark.png" width="" height="" alt="Логотип «Погнали»">
+            <picture>
+              <source
+                media="(min-width: 1440px)"
+                type="image/webp"
+                srcset="./img/content/logo/logo-desktop-dark.webp 1x, ./img/content/logo/logo-desktop-dark@2.webp 2x"
+              >
+              <source
+                media="(min-width: 1440px)"
+                srcset="./img/content/logo/logo-desktop-dark.png 1x, ./img/content/logo/logo-desktop-dark@2.png 2x"
+              >
+              <source
+                media="(min-width: 768px)"
+                type="image/webp"
+                srcset="./img/content/logo/logo-tablet-dark.webp 1x, ./img/content/logo/logo-tablet-dark@2.webp 2x"
+              >
+              <source
+                media="(min-width: 768px)"
+                srcset="./img/content/logo/logo-tablet-dark.png 1x, ./img/content/logo/logo-tablet-dark@2.png 2x"
+              >
+              <source
+                media="(min-width: 320px)"
+                type="image/webp"
+                srcset="./img/content/logo/logo-mobile-dark.webp 1x, ./img/content/logo/logo-mobile-dark@2.webp 2x"
+              >
+              <img
+                class="logo"
+                src="./img/content/logo/logo-mobile-dark.png"
+                srcset="./img/content/logo/logo-mobile-dark@2.png 2x"
+                width="100"
+                height="15"
+                alt="Логотип «Погнали»">
+            </picture>
           </a>
         </div>
 
