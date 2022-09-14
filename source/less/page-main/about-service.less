@@ -25,8 +25,10 @@
   .set-cross-platform-limits();
   margin-left: 24px;
   width: 211px;
+  position: relative;
 
   @media(min-width: @tablet-width) {
+    position: static;
     .reset();
 
     display: grid;
@@ -40,6 +42,46 @@
   @media(min-width: @desktop-width) {
     display: block;
     position: relative;
+  }
+
+  &::before {
+    .create-pseudo(absolute; top; -33; left; -49);
+    .size(113; 132);
+    border-radius: 0 20px 20px 0;
+
+    z-index: -1;
+    background-color: @basic-blue-dark;
+
+    @media(min-width: @tablet-width) {
+      .size(688; 212);
+      border-radius: 20px;
+      top: -41px;
+      left: -34px;
+    }
+
+    @media(min-width: @desktop-width) {
+      .size(212; 212);
+      top: -62px;
+      left: -70px;
+
+    }
+  }
+
+  &::after {
+    .create-pseudo(absolute; top; -33; left; -30);
+    .size(292; 353);
+    z-index: -1;
+    background-image: url(../../img/decor/about-mobile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../../img/decor/about-mobile@2.png);
+    }
+
+    @media(min-width: @tablet-width) {
+      display: none;
+    }
   }
 }
 
@@ -112,7 +154,6 @@
     display: block;
     grid-area: picture;
     position: absolute;
-    margin-left: 380px;
 
     .size(376; 548);
 
@@ -120,7 +161,7 @@
   }
 
   @media(min-width: @desktop-width) {
-    top: 15px;
+    top: -47px;
     right: 0;
 
     .size(630; 665);

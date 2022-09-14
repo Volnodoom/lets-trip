@@ -15,7 +15,7 @@
   <body>
     <a class="visually-hidden" href="#main">Перейти к контенту</a>
     <!-- header class could accept two extra classes page-header--expanded or page-header__no-js -->
-    <header class="page-header page-header--expanded">
+    <header class="page-header ">
       <div class="page-header__container">
         <a class="page-header__logo page-header__logo--light">
           <picture>
@@ -195,7 +195,29 @@
             <p class="about-service__content">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
               <b class="about-service__bold">А если найдете кого-то близкого по духу &mdash; скорее зовите в совместный трип!</b>
             </p>
-            <img class="about-service__product" src="" width="376" height="548" alt="Два скриншота работающего приложения. 3/5 размера карточки занимает аватар, 2/5 текст: имя пользователя, описание увлечений, кнопка позвать и количество лайков.">
+            <picture>
+              <source
+                media="(min-width: 1440px)"
+                type="image/webp"
+                srcset="./img/content/app-screenshot-desktop.webp 1x, ./img/content/app-screenshot-desktop@2.webp 2x"
+              >
+              <source
+                media="(min-width: 1440px)"
+                srcset="./img/content/app-screenshot-desktop.png 1x, ./img/content/app-screenshot-desktop@2.png 2x"
+              >
+              <source
+                media="(min-width: 768px)"
+                type="image/webp"
+                srcset="./img/content/app-screenshot-tablet.webp 1x, ./img/content/app-screenshot-tablet@2.webp 2x"
+              >
+              <img
+                class="about-service__product"
+                src="./img/content/app-screenshot-tablet.png"
+                srcset="./img/content/app-screenshot-tablet@2.png 2x"
+                width="376"
+                height="548"
+                alt="Два скриншота работающего приложения. 3/5 размера карточки занимает аватар, 2/5 текст: имя пользователя, описание увлечений, кнопка позвать и количество лайков.">
+            </picture>
             <a class="about-service__button button button--square" href="blank.html">Подробнее</a>
           </div>
         </section>
