@@ -11,15 +11,7 @@
 }
 
 @media (any-hover: hover) {
-  .tooltip--top {
-    &:hover {
-      &::before {
-        .create-pseudo(absolute; top; -14; left; 50%);
-        transform: translateX(-50%);
-        .triangle-box-bottom(10; 8; @basic-blue);
-      }
-    }
-  }
+
 
   .tooltip--left {
     &:hover {
@@ -27,6 +19,26 @@
         .create-pseudo(absolute; left; -14; top; 50%);
         transform: translateY(-50%);
         .triangle-box-right(10; 8; @basic-blue);
+      }
+    }
+  }
+
+  .tooltip--bottom {
+    &:hover {
+      &::before {
+        .create-pseudo(absolute; bottom; -14; left; 50%);
+        transform: translateX(-50%);
+        .triangle-box-top(10; 8; @basic-blue);
+      }
+    }
+  }
+
+  .tooltip--top {
+    &:hover {
+      &::before {
+        .create-pseudo(absolute; top; -14; left; 50%);
+        transform: translateX(-50%);
+        .triangle-box-bottom(10; 8; @basic-blue);
       }
     }
   }
@@ -59,5 +71,9 @@
     transform: translate(-100%, -50%);
   }
 
-
+  &--bottom {
+    bottom: calc(-13px - 56px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
