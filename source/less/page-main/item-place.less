@@ -1,15 +1,16 @@
 .item-place__container {
-  margin-top: -10px;
+  margin-top: -20px;
   padding: 10% 9% 9% 9%;
   border-radius: 10px;
   position: relative;
+  order: 20;
 
   background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
     grid-area: content;
 
-    min-height: 140px;
+    height: 140px;
     margin-top: 0;
     padding: 30px 26px 20px 26px;
 
@@ -57,13 +58,28 @@
 
   @media (min-width: @tablet-width) {
     padding-right: 0;
+    margin-bottom: 17px;
 
-    .size(361; 40);
+    width: 361px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 23px;
+  }
+
+  &--specific-box {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 2px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 23px;
+    }
   }
 }
 
 .item-place__new-paragraph {
-  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only){
     display: block;
   }
 }
@@ -80,7 +96,7 @@
 }
 
 .item-place__photo {
-  order: -1;
+  order: 10;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 

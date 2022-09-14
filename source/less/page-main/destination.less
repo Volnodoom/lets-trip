@@ -17,8 +17,11 @@
 .destination__container {
   .set-cross-platform-limits();
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
     margin-top: 73px;
     margin-bottom: 51px;
 
@@ -29,6 +32,27 @@
     "list-direction list-direction text-direction text-direction"
     "list-direction list-direction button-direction button-direction";
     column-gap: 60px;
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      .create-pseudo(absolute; top; 0; right; 0);
+      .size(288; 574);
+
+      z-index: -100;
+      background-image: url("../../img/decor/flags-back.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-origin: padding-box;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/decor/flags-back@2.png");
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -73px;
+    }
   }
 }
 
@@ -90,6 +114,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 46px;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
@@ -97,6 +122,22 @@
 
     margin-left: 70px;
     margin-bottom: 0;
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      .create-pseudo(absolute; top; -38; left; -36);
+      .size(141; 141);
+
+      z-index: -1;
+      border-radius: 20px;
+      background-color: @basic-blue-saturate-20;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -71px;
+      left: -70px;
+    }
   }
 }
 
@@ -120,6 +161,19 @@
 
   &:last-child{
     margin-bottom: 0;
+    position: relative;
+
+    &::before {
+      @media (min-width: @desktop-width) {
+        .create-pseudo(absolute; top; 0; left; 0);
+        .size(100%; 140);
+
+        z-index: 100;
+        border-radius: 20px;
+        background-image: linear-gradient(to top, @basic-white, transparent 58%);
+      }
+    }
+
   }
 }
 
