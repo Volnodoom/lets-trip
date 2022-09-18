@@ -28,11 +28,11 @@ export const styles = () => {
     .pipe(browser.stream({once: true}));
 }
 
-
 // HTML
 
 const html = () => {
   return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
 
@@ -40,6 +40,8 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src('source/js/*.js')
+    .pipe(terser())
+    .pipe(rename("script.min.js"))
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }
@@ -61,9 +63,11 @@ const copyImages = () => {
 
 const createWebp = () => {
   return gulp.src('source/img/**/*.{png,jpg}', '!source/img/favicons/*')
-    .pipe(squoosh({
-      webp: {}
-    }))
+    .pipe(
+      squoosh({
+        webp: {}
+      })
+    )
     .pipe(gulp.dest('build/img'))
 }
 
@@ -98,7 +102,6 @@ const copy = (done) => {
     .pipe(gulp.dest('build'))
   done();
 }
-
 
 // Clean
 
@@ -152,7 +155,6 @@ export const build = gulp.series(
 );
 
 // Default
-
 
 export default gulp.series(
   clean,
