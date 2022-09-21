@@ -140,7 +140,7 @@ const watcher = () => {
 
 // Build
 
-export const build = (done)= gulp.series(
+export const build = (done) => gulp.series(
   clean,
   copy,
   optimizeImages,
