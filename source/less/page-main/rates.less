@@ -96,28 +96,32 @@
   @media(min-width: @tablet-width) {
     width: auto;
     padding: 0 35px 0 90px;
-    margin-bottom: 59px;
+    margin-bottom: 33px;
   }
 
   @media(min-width: @desktop-width) {
     padding: 0 272px 0 90px;
-    margin-bottom: 59px;
   }
 }
 
 .rates__button-open {
+  .icon__round {
+    display: none;
+  }
+
   @media(min-width: @tablet-width) {
     .reset();
-    margin-left: 90px;
+
+    display: flex;
+    align-items: center;
+
+    .icon__round {
+      display: flex;
+      background-color: @basic-blue-saturate-20;
+    }
   }
 
-  &:link {
-    color: @special-blue-light-10;
-  }
-
-  &:visited {
-    color: @special-blue-light-10;
-  }
+  color: @special-blue-light-10;
 
   &:focus {
     .set-focus-style-by-area();
@@ -125,14 +129,12 @@
 
   @media (any-hover: hover) {
     &:hover {
-      color: @special-blue-light-10;
-      opacity: 0.7;
+      color: rgba(19, 37, 118, 0.7);
     }
   }
 
   &:active {
-    color: @special-blue-light-10;
-    opacity: 0.3;
+    color: rgba(19, 37, 118, 0.3);
   }
 }
 

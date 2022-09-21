@@ -94,7 +94,6 @@
 
 .header-menu__contacts {
   padding: 0;
-  padding-left: 60px;
   padding-right: 20px;
   margin: 0 auto;
   margin-bottom: 53px;
@@ -116,17 +115,17 @@
   padding-bottom: 12px;
 
   @media (min-width: @desktop-width) {
-    padding-top: 25px;
-    padding-bottom: 15px;
-    .size(50; 50);
-    background-color: coral;
-
     & .header-menu__contacts-info {
       display: none;
     }
-
   }
 }
+
+.header-menu__contacts-link {
+  display: flex;
+  align-items: center;
+}
+
 
 .header-menu__socials {
   display: flex;
@@ -141,8 +140,23 @@
   list-style: none;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
-    padding-left: 98px;
-  }
+    margin-left: 83px;
 
+    width: 140px;
+    height: 28px;
+  }
+}
+
+.header-menu__socials-item {
+ height: 21px;
+
+  @media (min-width: @tablet-width) {
+    height: 28px;
+  }
+}
+
+.header-menu__socials-link {
+  display: flex;
+  height: 100%;
+  width: 100%;
 }

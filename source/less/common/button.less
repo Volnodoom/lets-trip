@@ -37,14 +37,27 @@
 
   &--oval-nav {
     .font-params(17; 30; 700);
+
     @media(min-width: @tablet-width) {
       .font-params(20; 20);
       --button-vertical-padding: 17px;
 
     }
+
     @media(min-width: @desktop-width) {
       font-weight: 700;
     }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: @basic-yellow-dark;
+      }
+    }
+
+    &:active {
+      background-color: @basic-yellow-dark;
+      color: rgba(22, 28, 53, 0.3);
+     }
   }
 
   &--oval {

@@ -1,0 +1,250 @@
+.icon {
+  margin: auto;
+
+  &--telephone {
+    .size(18; 18);
+
+    @media (min-width: @tablet-width) {
+    .size(27; 26);
+    }
+  }
+
+  &--mail {
+    .size(18; 13);
+
+    @media (min-width: @tablet-width) {
+      .size(28; 19);
+    }
+  }
+
+  &--mobile {
+    .size(18; 18);
+  }
+
+  &--email {
+    .size(16; 14);
+  }
+
+  &--facebook {
+    .size(11; 21);
+
+    @media (min-width: @tablet-width) {
+    .size(14; 28);
+    }
+  }
+
+  &--vkontakte {
+    .size(23; 12);
+
+    @media (min-width: @tablet-width) {
+    .size(31; 16);
+    }
+  }
+
+  &--instagram {
+    .size(18; 18);
+
+    @media (min-width: @tablet-width) {
+    .size(23; 24);
+    }
+  }
+
+  &--map-mark {
+    .size(16; 21);
+
+    @media (min-width: @tablet-width) {
+      .size(24; 32);
+    }
+
+    @media (min-width: @desktop-width) {
+      .size(32; 42);
+
+    }
+  }
+
+}
+
+.icon__header {
+  margin: 0 16px 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 23px 0 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.icon__header {
+  & .icon--telephone,
+  & .icon--mail {
+    color: @basic-yellow;
+  }
+}
+
+.icon__round {
+  display: flex;
+
+  .size(45; 45);
+  border-radius: 50%;
+  background-color: @basic-blue;
+
+  @media (min-width: @tablet-width) {
+    .size(68; 68);
+  }
+
+  @media (min-width: @desktop-width) {
+    .size(50; 50);
+  }
+
+  @media (min-width: @desktop-width) {
+    &--phone-call {
+      background-color: @basic-orange;
+
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: @basic-orange-dark;
+        }
+      }
+
+      &:active {
+        background-color: @basic-orange-dark;
+        .icon--mobile {
+          opacity: 0.3;
+        }
+       }
+    }
+
+    &--email-sent {
+      background-color: @basic-yellow-dark;
+
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: @basic-orange;
+        }
+      }
+
+      &:active {
+        background-color: @basic-orange;
+        .icon--email {
+          opacity: 0.3;
+        }
+       }
+    }
+  }
+}
+
+.icon--facebook,
+.icon--vkontakte,
+.icon--instagram {
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+   }
+}
+
+.icon__user {
+  @media (min-width: @tablet-width) {
+    .size(24; 24);
+  }
+}
+
+.icon__transport {
+  opacity: 0.15;
+
+  &--selected {
+    opacity: 1;
+  }
+}
+
+.icon__rates {
+  margin-right: 21px;
+}
+
+.icon__register {
+  margin-right: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 31px;
+  }
+
+  &.icon__round {
+    background-color: @basic-blue-dark;
+    @media(min-width: @desktop-width) {
+      .size(90; 90);
+    }
+  }
+}
+
+.icon__address {
+  margin-right: 16px;
+  flex-shrink: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 26px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 31px 0 0;
+
+  }
+
+  &.icon__round {
+    background-color: @special-blue;
+    @media(min-width: @desktop-width) {
+      .size(90; 90);
+    }
+  }
+}
+
+.icon__footer {
+  &.icon__round {
+    background-color: @basic-yellow;
+    @media (min-width: @desktop-width) {
+      .size(68; 68);
+    }
+  }
+
+  &:link {
+    background-color: @basic-yellow;
+   }
+
+  &:visited {
+    background-color: @basic-yellow;
+   }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: @basic-yellow-dark;
+    }
+  }
+
+  &:active {
+    background-color: @basic-yellow-dark;
+
+   }
+
+  .icon--facebook,
+  .icon--vkontakte,
+  .icon--instagram {
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+   }
+}
+}

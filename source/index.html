@@ -15,7 +15,7 @@
   <body>
     <a class="visually-hidden" href="#main">Перейти к контенту</a>
     <!-- header class could accept two extra classes page-header--expanded or page-header__no-js -->
-    <header class="page-header ">
+    <header class="page-header">
       <div class="page-header__container">
         <a class="page-header__logo page-header__logo--light">
           <picture>
@@ -121,13 +121,30 @@
           <span class="visually-hidden">Контакты организации</span>
           <ul class="header-menu__contacts">
             <li class="header-menu__contacts-item">
-              <a class="link link--contacts" href="tel:+79547080478">
+              <a class="header-menu__contacts-link link link--contacts" href="tel:+79547080478">
+                <div class="icon__round icon__round--phone-call icon__header">
+                  <svg class="icon icon--telephone" xmlns="http://www.w3.org/2000/svg" width="18" heigh="17" viewBox="0 0 18 17">
+                    <use href="./img/sprite.svg#icon-telephone"></use>
+                  </svg>
+                  <svg class="icon icon--mobile" xmlns="http://www.w3.org/2000/svg" width="18" heigh="18" viewBox="0 0 18 18">
+                    <use href="./img/sprite.svg#icon-mobile"></use>
+                  </svg>
+                </div>
                 <span class="header-menu__contacts-info">+7 954 708-04-78</span>
               </a>
             </li>
+
             <li class="header-menu__contacts-item">
-              <a class="link link--contacts" href="mailto:letstrip@tumbatumba.com">
-                <span class="header-menu__contacts-info">letstrip@tumbatumba.com</span>
+              <a class="header-menu__contacts-link link link--contacts" href="mailto:letstrip@tumba.com">
+                <div class="icon__round icon__round--email-sent icon__header">
+                  <svg class="icon icon--mail" xmlns="http://www.w3.org/2000/svg" width="18" heigh="13" viewBox="0 0 18 13">
+                    <use href="./img/sprite.svg#icon-mail"></use>
+                  </svg>
+                  <svg class="icon icon--email" xmlns="http://www.w3.org/2000/svg" width="16" heigh="14" viewBox="0 0 16 14">
+                    <use href="./img/sprite.svg#icon-email"></use>
+                  </svg>
+                </div>
+                <span class="header-menu__contacts-info">letstrip@tumba.com</span>
               </a>
             </li>
           </ul>
@@ -135,18 +152,27 @@
           <span class="visually-hidden">Мы в социальных сетях</span>
           <ul class="header-menu__socials">
             <li class="header-menu__socials-item">
-              <a class="link link--social-head link--facebook" href="#">
-                <span>Facebook</span>
+              <a class="header-menu__socials-link link" href="#">
+                <svg class="icon icon--facebook" xmlns="http://www.w3.org/2000/svg" width="11" heigh="21" viewBox="0 0 11 21">
+                  <use href="./img/sprite.svg#icon-facebook"></use>
+                </svg>
+                <span class="visually-hidden">Facebook</span>
               </a>
             </li>
             <li class="header-menu__socials-item">
-              <a class="link link--social-head link--VK" href="#" >
-                <span>VK</span>
+              <a class="header-menu__socials-link link" href="#" >
+                <svg class="icon icon--vkontakte" xmlns="http://www.w3.org/2000/svg" width="23" heigh="13" viewBox="0 0 23 13">
+                  <use href="./img/sprite.svg#icon-vkontakte"></use>
+                </svg>
+                <span class="visually-hidden">VK</span>
               </a>
             </li>
             <li class="header-menu__socials-item">
-              <a class="link link--social-head link--instagram" href="#">
-                <span>Instagram</span>
+              <a class="header-menu__socials-link link" href="#">
+                <svg class="icon icon--instagram" xmlns="http://www.w3.org/2000/svg" width="18" heigh="18" viewBox="0 0 18 18">
+                  <use href="./img/sprite.svg#icon-instagram"></use>
+                </svg>
+                <span class="visually-hidden">Instagram</span>
               </a>
             </li>
           </ul>
@@ -225,7 +251,7 @@
         <section class="destination">
           <div class="destination__container">
             <h2 class="destination__title title title--main-page">Направления</h2>
-            <p class="destination__text text__basic-main-page">Мы не продаем туры<br>и ничего не рекламируем.<br>Люди сами пишут о странах,<br>куда хотели бы отправиться<br>и чем можно там заняться.</p>
+            <p class="destination__text destination__text-params">Мы не продаем туры<br>и ничего не рекламируем.<br>Люди сами пишут о странах,<br>куда хотели бы отправиться<br>и чем можно там заняться.</p>
 
             <ul class="destination__list">
               <li class="destination__item item-place">
@@ -244,10 +270,15 @@
                       height="24"
                       alt="Флаг Таиланда. Полосы горизонтальные: красный, белый, синий, белый, красный.">
                   </picture>
-                  <p class="item-place__text text text--destination">Джунгли зовут!</p>
-                  <p class="item-place__number text text--number">
-                    <span class="visually-hidden">Количество путешественников: </span>18321
-                  </p>
+                  <p class="item-place__text item-place__text-params item-place__text-params--destination">Джунгли зовут!</p>
+                  <div class="item-place__number">
+                    <svg class="icon__user" xmlns="http://www.w3.org/2000/svg" width="14" heigh="14" viewBox="0 0 14 14">
+                      <use href="./img/sprite.svg#icon-user"></use>
+                    </svg>
+                    <p class="item-place__text-params item-place__text-params--number">
+                      <span class="visually-hidden">Количество путешественников: </span>18321
+                    </p>
+                  </div>
                 </div>
                 <picture>
                   <source
@@ -277,10 +308,15 @@
               <li class="destination__item item-place">
                 <div class="item-place__container">
                   <h3 class="item-place__title title title--destination">Франция</h3>
-                  <p class="item-place__text text text--destination">Трэ бьен, манифик!</p>
-                  <p class="item-place__number text text--number">
-                    <span class="visually-hidden">Количество путешественников: </span>12518
-                  </p>
+                  <p class="item-place__text item-place__text-params item-place__text-params--destination">Трэ бьен, манифик!</p>
+                  <div class="item-place__number">
+                    <svg class="icon__user" xmlns="http://www.w3.org/2000/svg" width="14" heigh="14" viewBox="0 0 14 14">
+                      <use href="./img/sprite.svg#icon-user"></use>
+                    </svg>
+                    <p class="item-place__text-params item-place__text-params--number">
+                      <span class="visually-hidden">Количество путешественников: </span>12518
+                    </p>
+                  </div>
                   <picture>
                     <source
                       type="image/webp"
@@ -323,12 +359,15 @@
               <li class="destination__item item-place">
                 <div class="item-place__container">
                   <h3 class="item-place__title title title--destination">Чехия</h3>
-                  <p class="item-place__text item-place__text--specific-box text text--destination">Закоулки
-                    <span class="item-place__new-paragraph"> старой Европы</span>
-                  </p>
-                  <p class="item-place__number text text--number">
-                    <span class="visually-hidden">Количество путешественников: </span>5326
-                  </p>
+                  <p class="item-place__text item-place__text-params item-place__text-params--destination">Закоулки старой Европы</p>
+                  <div class="item-place__number">
+                    <svg class="icon__user" xmlns="http://www.w3.org/2000/svg" width="14" heigh="14" viewBox="0 0 14 14">
+                      <use href="./img/sprite.svg#icon-user"></use>
+                    </svg>
+                    <p class="item-place__text-params item-place__text-params--number">
+                      <span class="visually-hidden">Количество путешественников: </span>5326
+                    </p>
+                  </div>
                   <picture>
                     <source
                       type="image/webp"
@@ -471,24 +510,36 @@
 
                 <h4 class="visually-hidden">Пользователь предпочитает передвижении</h4>
                 <ul class="item-user__transport-list">
-                  <li class="item-user__transport-item tooltip tooltip--top transport transport--selected transport--fly">
+                  <li class="item-user__transport-item tooltip tooltip--top">
                     <span class="tooltip__content tooltip__content--top">Авиаперелёт</span>
                     <span class="visually-hidden">Авиаперелёт выбран</span>
+                    <svg class="icon__transport icon__transport--selected" xmlns="http://www.w3.org/2000/svg" width="18" heigh="20" viewBox="0 0 18 20">
+                      <use href="./img/sprite.svg#icon-plane"></use>
+                    </svg>
                   </li>
 
-                  <li class="item-user__transport-item tooltip tooltip--top transport transport--bus">
+                  <li class="item-user__transport-item tooltip tooltip--top">
                     <span class="tooltip__content tooltip__content--top">Автотранспорт</span>
                     <span class="visually-hidden">Автотранспорт</span>
+                    <svg class="icon__transport" xmlns="http://www.w3.org/2000/svg" width="17" heigh="20" viewBox="0 0 17 20">
+                      <use href="./img/sprite.svg#icon-bus"></use>
+                    </svg>
                   </li>
 
-                  <li class="item-user__transport-item tooltip tooltip--top transport transport--cycle">
+                  <li class="item-user__transport-item tooltip tooltip--top">
                     <span class="tooltip__content tooltip__content--top">Велосипед</span>
                     <span class="visually-hidden">Велосипед</span>
+                    <svg class="icon__transport" xmlns="http://www.w3.org/2000/svg" width="24" heigh="24" viewBox="0 0 24 24">
+                      <use href="./img/sprite.svg#icon-bicycle"></use>
+                    </svg>
                   </li>
 
-                  <li class="item-user__transport-item tooltip tooltip--top transport transport--walk">
+                  <li class="item-user__transport-item tooltip tooltip--top">
                     <span class="tooltip__content tooltip__content--top">Ходьба</span>
                     <span class="visually-hidden">Ходьба</span>
+                    <svg class="icon__transport" xmlns="http://www.w3.org/2000/svg" width="21" heigh="23" viewBox="0 0 21 23">
+                      <use href="./img/sprite.svg#icon-run"></use>
+                    </svg>
                   </li>
                 </ul>
               </div>
@@ -599,24 +650,36 @@
 
                 <h4 class="visually-hidden">Пользователь предпочитает передвижении</h4>
                 <ul class="item-user__transport-list">
-                  <li class="item-user__transport-item tooltip tooltip--top transport transport--selected transport--fly" aria-label="Авиаперелёт выбран">
+                  <li class="item-user__transport-item tooltip tooltip--top" aria-label="Авиаперелёт выбран">
                     <span class="tooltip__content tooltip__content--top">Авиаперелёт</span>
                     <span class="visually-hidden">Авиаперелёт выбран</span>
+                    <svg class="icon__transport icon__transport--selected" xmlns="http://www.w3.org/2000/svg" width="18" heigh="20" viewBox="0 0 18 20">
+                      <use href="./img/sprite.svg#icon-plane"></use>
+                    </svg>
                   </li>
 
-                  <li class="item-user__transport-item tooltip tooltip--top transport transport--bus" aria-label="Автотранспорт">
+                  <li class="item-user__transport-item tooltip tooltip--top" aria-label="Автотранспорт">
                     <span class="tooltip__content tooltip__content--top">Автотранспорт</span>
                     <span class="visually-hidden">Автотранспорт</span>
+                    <svg class="icon__transport" xmlns="http://www.w3.org/2000/svg" width="17" heigh="20" viewBox="0 0 17 20">
+                      <use href="./img/sprite.svg#icon-bus"></use>
+                    </svg>
                   </li>
 
-                  <li class="item-user__transport-item tooltip tooltip--top transport transport--selected transport--cycle" aria-label="Велосипед выбран">
+                  <li class="item-user__transport-item tooltip tooltip--top" aria-label="Велосипед выбран">
                     <span class="tooltip__content tooltip__content--top">Велосипед</span>
                     <span class="visually-hidden">Велосипед выбран</span>
+                    <svg class="icon__transport icon__transport--selected" xmlns="http://www.w3.org/2000/svg" width="24" heigh="24" viewBox="0 0 24 24">
+                      <use href="./img/sprite.svg#icon-bicycle"></use>
+                    </svg>
                   </li>
 
-                  <li class="item-user__transport-item tooltip tooltip--top transport transport--selected transport--walk" aria-label="Ходьба выбрана">
+                  <li class="item-user__transport-item tooltip tooltip--top" aria-label="Ходьба выбрана">
                     <span class="tooltip__content tooltip__content--top">Ходьба</span>
                     <span class="visually-hidden">Ходьба выбрана</span>
+                    <svg class="icon__transport icon__transport--selected" xmlns="http://www.w3.org/2000/svg" width="21" heigh="23" viewBox="0 0 21 23">
+                      <use href="./img/sprite.svg#icon-run"></use>
+                    </svg>
                   </li>
                 </ul>
               </div>
@@ -684,7 +747,14 @@
           </dl>
 
           <!-- click on this button add class to modal window -->
-          <button class="rates__button-open button__one-line button__one-line--rates" type="button">Показать тарифы для бизнеса</button>
+          <button class="rates__button-open button__one-line button__one-line--rates" type="button">
+            <div class="icon__rates icon__round">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="27" heigh="27" viewBox="0 0 27 27">
+                <use href="./img/sprite.svg#icon-businessman"></use>
+              </svg>
+            </div>
+            Показать тарифы для бизнеса
+          </button>
         </div>
       </section>
 
@@ -709,10 +779,24 @@
 
           <ul class="register__list">
             <li class="register__list-item">
-              <a class="register__list-link link--phone" href="tel:+79547080478">+7 954 708-04-78</a>
+              <a class="register__list-link link--phone" href="tel:+79547080478">
+                <div class="icon__register icon__round">
+                  <svg class="icon icon--telephone" xmlns="http://www.w3.org/2000/svg" width="18" heigh="17" viewBox="0 0 18 17">
+                    <use href="./img/sprite.svg#icon-telephone"></use>
+                  </svg>
+                </div>
+                +7 954 708-04-78
+              </a>
             </li>
             <li class="register__list-item">
-              <a class="register__list-link link--mail" href="email:letstrip@tumbatumba.com">letstrip@tumbatumba.com</a>
+              <a class="register__list-link link--mail" href="email:letstrip@tumba.com">
+                <div class="icon__register icon__round">
+                  <svg class="icon icon--mail" xmlns="http://www.w3.org/2000/svg" width="19" heigh="13" viewBox="0 0 19 13">
+                    <use href="./img/sprite.svg#icon-mail"></use>
+                  </svg>
+                </div>
+                letstrip@tumba.com
+              </a>
             </li>
           </ul>
         </div>
@@ -720,7 +804,14 @@
 
       <section class="address">
         <div class="address__container">
-          <h2 class="address__title address__title-style">проспект Руставели 1, Батуми, Грузия</h2>
+          <h2 class="address__title address__title-style">
+            <div class="icon__address icon__round">
+              <svg class="icon icon--map-mark" xmlns="http://www.w3.org/2000/svg" width="17" heigh="21" viewBox="0 0 17 21">
+                <use href="./img/sprite.svg#icon-map-mark"></use>
+              </svg>
+            </div>
+            проспект Руставели 1, Батуми, Грузия
+          </h2>
           <button class="address__button button button--square">Проложить маршрут</button>
         </div>
       </section>
@@ -800,20 +891,35 @@
 
         <ul class="page-footer__list">
           <li class="page-footer__list-item">
-            <a class="link link--social-foot link--facebook" href="#">
-              <span>Facebook</span>
+            <a class="link" href="#">
+              <span class="visually-hidden">Facebook</span>
+              <div class="icon__footer icon__round">
+                <svg class="icon icon--facebook" xmlns="http://www.w3.org/2000/svg" width="11" heigh="21" viewBox="0 0 11 21">
+                  <use href="./img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </div>
             </a>
           </li>
 
           <li class="page-footer__list-item">
-            <a class="link link--social-foot link--VK" href="#" >
-              <span>VK</span>
+            <a class="link" href="#" >
+              <span class="visually-hidden">VK</span>
+              <div class="icon__footer icon__round">
+                <svg class="icon icon--vkontakte" xmlns="http://www.w3.org/2000/svg" width="23" heigh="13" viewBox="0 0 23 13">
+                  <use href="./img/sprite.svg#icon-vkontakte"></use>
+                </svg>
+              </div>
             </a>
           </li>
 
           <li class="page-footer__list-item">
-            <a class="link link--social-foot link--instagram" href="#">
-              <span>Instagram</span>
+            <a class="link" href="#">
+              <span class="visually-hidden">Instagram</span>
+              <div class="icon__footer icon__round">
+                <svg class="icon icon--instagram" xmlns="http://www.w3.org/2000/svg" width="18" heigh="18" viewBox="0 0 18 18">
+                  <use href="./img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </div>
             </a>
           </li>
         </ul>
