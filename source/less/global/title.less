@@ -1,0 +1,48 @@
+.title {
+  font-weight: 700;
+  text-align: start;
+
+  &--extra {
+    .font-params(36; 40);
+    color: @basic-white;
+    text-align: center;
+
+
+    @media(min-width: @tablet-width) {
+      .font-params(60; 70);
+    }
+
+    @media(min-width: @desktop-width) {
+      text-align: start;
+    }
+  }
+
+  &--main-page {
+    .font-params(24; 24);
+
+    color: @basic-orange;
+
+    @media(min-width: @tablet-width) {
+      .font-params(45; 45);
+    }
+  }
+
+  &--destination {
+    .font-params(21; 21);
+    color: @basic-black;
+
+    @media(min-width: @tablet-width) {
+      .font-params(24; 24);
+    }
+  }
+
+  &--companion {
+    .font-params(21; 21);
+    text-align: center;
+    color: @special-blue;
+
+    @media(min-width: @tablet-width) {
+      .font-params(24; 22);
+    }
+  }
+}

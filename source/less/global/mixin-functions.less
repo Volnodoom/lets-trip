@@ -1,0 +1,208 @@
+.size(@w; @h) {
+  width: if(isunit(@w, "%") or iskeyword(@w) or isunit(@w, px) or isstring(@w), @w, ~"@{w}px");
+  height: if(isunit(@h, "%") or iskeyword(@h) or isunit(@h, px) or isstring(@h), @h, ~"@{h}px");
+}
+
+.font-params(@size; @line-heigh) {
+  font-size: if(isunit(@size, px), @size, ~"@{size}px");
+  line-height: if(isunit(@line-heigh, px), @line-heigh, ~"@{line-heigh}px");
+}
+
+.font-params(@size; @line-heigh; @weight) {
+  font-size: if(isunit(@size, px), @size, ~"@{size}px");
+  line-height: if(isunit(@line-heigh, px), @line-heigh, ~"@{line-heigh}px");
+  font-weight: @weight;
+}
+
+.reset() {
+  margin: 0;
+  padding: 0;
+}
+
+.create-pseudo(@position) {
+  content: "";
+  position: @position;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.create-pseudo(@position; right) {
+  top: 0;
+  right: 0;
+}
+
+.create-pseudo(@position; left) {
+  top: 0;
+  left: 0;
+}
+
+.create-pseudo(@position; bottomRight) {
+  bottom: 0;
+  right: 0;
+}
+
+.create-pseudo(@position; bottomLeft) {
+  bottom: 0;
+  left: 0;
+}
+
+.create-pseudo(@position; @_) {
+  content: "";
+  position: @position;
+}
+
+
+.create-pseudo(@position; @top; @right; @bottom; @left) when(isnumber(@top)) {
+  content: "";
+  position: @position;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+}
+
+.create-pseudo(@position; @side; @value; @side2; @value2) when(iskeyword(@side)) {
+  content: "";
+  position: @position;
+  @{side}: if(isunit(@value, "%") or isstring(@value), @value, ~"@{value}px");
+  @{side2}: if(isunit(@value2, "%") or isstring(@value2), @value2, ~"@{value2}px");
+}
+
+.position-element(@position; @side; @value; @side2; @value2) when(iskeyword(@side)) {
+  position: @position;
+  @{side}: if(isunit(@value, "%") or isstring(@value), @value, ~"@{value}px");
+  @{side2}: if(isunit(@value2, "%") or isstring(@value2), @value2, ~"@{value2}px");
+}
+
+.set-starting-section(@z-position; @frame-color: @basic-blue) {
+  position: relative;
+
+  padding: 0 25px;
+  margin-top: -30px;
+  min-width: 320px;
+  width: 100%;
+
+  border-radius: 0 0 30px 30px;
+  z-index: @z-position;
+  background-color: @frame-color;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media(min-width: @tablet-width) {
+    padding: 0 40px;
+    margin-top: -60px;
+
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media(min-width: @desktop-width) {
+    padding: 0 58px;
+  }
+}
+
+.set-cross-platform-limits() {
+  width: @fixed-mobile-screen;
+
+  @media(min-width: @tablet-width) {
+    width: @fixed-tablet-screen;
+  }
+
+  @media(min-width: @desktop-width) {
+    width: @fixed-desktop-screen;
+  }
+}
+
+.set-desktop-grid() {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 285px);
+    column-gap: @desktop-grid-gap;
+  }
+}
+
+.limit-text() {
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+.set-focus-style-by-area(@radius: 3px; @thick: 2px; @color: @special-blue) {
+  border-radius: if(isstring(@radius) or isunit(@radius, px), @radius, ~"@{radius}px");
+  outline-offset: if(isstring(@radius) or isunit(@radius, px), @radius, ~"@{radius}px");
+  outline: @color solid if(isstring(@thick) or isunit(@thick, px), @thick, ~"@{thick}px");
+}
+
+.set-focus-style-by-contour(@thick: 2px) {
+  outline: @special-blue solid @thick;
+}
+
+.create-rate-section-line(@position; @orientation) {
+  .create-pseudo(@position; @orientation);
+  display: block;
+  .size(100%; 1);
+  background-color: @basic-blue-light-20;
+}
+
+.triangle(@_; @size; @sub-size; @color) {
+  width: 0;
+  height: 0;
+
+  border: @size solid @color;
+}
+
+.triangle(top; @size; @sub-size; @color) {
+  border-left-width: @sub-size;
+  border-right-width: @sub-size;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-style: none;
+}
+
+.triangle(bottom; @size; @sub-size; @color) {
+  border-left-width: @sub-size;
+  border-right-width: @sub-size;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-style: none;
+}
+
+.triangle(left; @size; @sub-size; @color) {
+  border-top-width: @sub-size;
+  border-bottom-width: @sub-size;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-style: none;
+}
+
+.triangle(right; @size; @sub-size; @color) {
+  border-top-width: @sub-size;
+  border-bottom-width: @sub-size;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-style: none;
+}
+
+.triangle-box-top(@size; @sub-size; @color: @special-blue) {
+  .triangle(top; ~"@{size}px"; ~"@{sub-size}px"; @color);
+}
+
+.triangle-box-right(@size; @sub-size; @color: @special-blue) {
+  .triangle(right; ~"@{size}px"; ~"@{sub-size}px"; @color);
+}
+
+.triangle-box-bottom(@size; @sub-size; @color: @special-blue) {
+  .triangle(bottom; ~"@{size}px"; ~"@{sub-size}px"; @color);
+}
+
+.triangle-box-left(@size; @sub-size; @color: @special-blue) {
+  .triangle(left; ~"@{size}px"; ~"@{sub-size}px"; @color);
+}
+

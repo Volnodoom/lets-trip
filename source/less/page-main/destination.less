@@ -1,0 +1,201 @@
+.destination {
+  .set-starting-section(900; @basic-blue-light);
+  padding-top: 101px;
+  padding-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 149px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 176px;
+    padding-bottom: 87px;
+  }
+}
+
+.destination__container {
+  .set-cross-platform-limits();
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 73px;
+    margin-bottom: 51px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 285px);
+    grid-template-areas:
+    "list-direction list-direction title-direction title-direction"
+    "list-direction list-direction text-direction text-direction"
+    "list-direction list-direction button-direction button-direction";
+    column-gap: 60px;
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      .create-pseudo(absolute; top; 0; right; 0);
+      .size(288; 574);
+
+      z-index: -100;
+      background-image: url("../../img/decor/flags-back.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-origin: padding-box;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/decor/flags-back@2.png");
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -73px;
+    }
+  }
+}
+
+.destination__title {
+  margin: 0;
+  margin-bottom: 19px;
+  padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 367px;
+    padding: 0 33px;
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+    width: auto;
+    grid-area: title-direction;
+
+    padding: 0;
+    padding-top: 5px;
+    padding-left: 111px;
+    margin-bottom: 58px;
+  }
+}
+
+.destination__text {
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding: 0;
+    padding-right: 15px;
+
+    width: 378px;
+    margin-left: 35px;
+    margin-bottom: 104px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: text-direction;
+    display: inline;
+    width: auto;
+
+    .reset();
+    padding-left: 111px;
+    padding-right: 20px;
+    margin-bottom: 98px;
+  }
+}
+
+.destination__text-params {
+  @media (min-width: @tablet-width) {
+    .font-params(28; 33);
+  }
+}
+
+.destination__list {
+  list-style: none;
+  .reset();
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 46px;
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: list-direction;
+
+    margin-left: 70px;
+    margin-bottom: 0;
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      .create-pseudo(absolute; top; -38; left; -36);
+      .size(141; 141);
+
+      z-index: -1;
+      border-radius: 20px;
+      background-color: @basic-blue-saturate-20;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -71px;
+      left: -70px;
+    }
+  }
+}
+
+.destination__item {
+  margin-bottom: 9px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 11px;
+    display: grid;
+    grid-template-columns: 430px 186px;
+    grid-template-areas: "content photo";
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
+    grid-template-columns: 374px 186px;
+
+  }
+
+  &:last-child{
+    margin-bottom: 0;
+    position: relative;
+
+    &::before {
+      @media (min-width: @desktop-width) {
+        .create-pseudo(absolute; top; 0; left; 0);
+        .size(100%; 140);
+
+        z-index: 100;
+        border-radius: 20px;
+        background-image: linear-gradient(to top, @basic-white, transparent 58%);
+      }
+    }
+
+  }
+}
+
+.destination__button {
+  min-height: 62px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    .size(618; 82);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: button-direction;
+
+    margin-left: 111px;
+
+    .size(275; 80);
+  }
+}

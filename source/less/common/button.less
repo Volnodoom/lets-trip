@@ -1,0 +1,150 @@
+.mobile-padding() {
+  --button-vertical-padding: 22px;
+  --button-horizontal-padding: 23px;
+}
+
+.non-mobile-padding() {
+  --button-vertical-padding: 28px;
+  --button-horizontal-padding: 32px;
+}
+
+.button {
+  display: block;
+
+  width: 270px;
+  height: 50px;
+  padding: var(--button-vertical-padding) var(--button-horizontal-padding);
+
+// in case of this is a link
+  outline: none;
+  text-decoration: none;
+
+  color: @basic-blue;
+  border: none;
+  border-radius: 25px;
+  background-color: @basic-yellow;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  overflow-wrap: break-word;
+
+  --button-vertical-padding: 12px;
+  --button-horizontal-padding: 30px;
+
+  &--oval-nav {
+    .font-params(17; 30; 700);
+
+    @media(min-width: @tablet-width) {
+      .font-params(20; 20);
+      --button-vertical-padding: 17px;
+
+    }
+
+    @media(min-width: @desktop-width) {
+      font-weight: 700;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: @basic-yellow-dark;
+      }
+    }
+
+    &:active {
+      background-color: @basic-yellow-dark;
+      color: rgba(22, 28, 53, 0.3);
+     }
+  }
+
+  &--oval {
+    .font-params(17; 20; 700);
+    @media(min-width: @tablet-width) {
+      .font-params(20; 20);
+    }
+  }
+
+  &--square {
+    position: relative;
+    .mobile-padding();
+    padding-right: 60px;
+    border-radius: 10px;
+
+    .font-params(18; 18; 700);
+
+    text-align: start;
+    text-transform: none;
+
+    @media(min-width: @tablet-width) {
+      border-radius: 20px;
+
+      .non-mobile-padding();
+      padding-right: 60px;
+
+      .font-params(24; 24);
+    }
+
+    &::after {
+      .create-pseudo(absolute; top; 24; right; 23);
+      .triangle-box-right(14; 7);
+      margin-left: auto;
+
+      @media(min-width: @tablet-width) {
+        top: 33px;
+        right: 35px;
+      }
+    }
+
+    &:active::after {
+      border-left-color: rgba(29, 46, 91, 0.3);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: @basic-yellow-dark;
+      }
+    }
+
+    &:active {
+      color: rgba(29, 46, 91, 0.3);
+    }
+  }
+}
+
+
+.button__one-line {
+  display: block;
+  .reset();
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  .limit-text();
+
+  &--rates {
+    color: @special-blue-light-10;
+    .font-params(16; 16; 700);
+
+    @media(min-width: @tablet-width) {
+      .font-params(20; 20);
+    }
+  }
+
+  &--business {
+    color: @special-blue;
+    .font-params(16; 24; 700);
+    text-transform: uppercase;
+
+    @media(min-width: @tablet-width) {
+      font-size: 24px;
+      text-transform: none;
+    }
+  }
+}

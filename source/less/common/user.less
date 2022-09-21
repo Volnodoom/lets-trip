@@ -1,0 +1,44 @@
+.user {
+  position: relative;
+
+  &--offline {
+    &::before {
+      background-color: @basic-red-50;
+    }
+  }
+
+  &--online {
+    &::before {
+      background-color: @basic-fresh-green;
+    }
+  }
+
+  &::before {
+    // left moved 5px less because padding of 5 px for element`s focus state
+    .create-pseudo(absolute; top; ~"calc(50% - 3px)"; left; -5);
+    transform: translateX(-50%);
+    display: block;
+    .size(6; 6);
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      .size(8; 8);
+      left: -9px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+  }
+}
