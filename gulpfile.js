@@ -144,14 +144,12 @@ export const build = (done)= gulp.series(
   clean,
   copy,
   optimizeImages,
-  gulp.parallel(
-    styles,
-    html,
-    scripts,
-    svg,
-    sprite,
-    createWebp
-  ),
+  styles,
+  html,
+  scripts,
+  svg,
+  sprite,
+  createWebp
 ) (done);
 
 // Default
