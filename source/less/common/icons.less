@@ -58,7 +58,6 @@
 
     @media (min-width: @desktop-width) {
       .size(32; 42);
-
     }
   }
 
@@ -149,6 +148,46 @@
    }
 }
 
+.icon__welcome {
+  @media (max-width: @mobile-width-only) {
+    &.icon__round--phone-call {
+      .size(40; 40);
+      background-color: @basic-orange;
+
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: @basic-orange-dark;
+        }
+      }
+
+      &:active {
+        background-color: @basic-orange-dark;
+        .icon--mobile {
+          opacity: 0.3;
+        }
+       }
+    }
+
+    &.icon__round--email-sent {
+      .size(40; 40);
+      background-color: @basic-yellow-dark;
+
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: @basic-orange;
+        }
+      }
+
+      &:active {
+        background-color: @basic-orange;
+        .icon--email {
+          opacity: 0.3;
+        }
+       }
+    }
+  }
+}
+
 .icon__user {
   @media (min-width: @tablet-width) {
     .size(24; 24);
@@ -237,14 +276,14 @@
   .icon--facebook,
   .icon--vkontakte,
   .icon--instagram {
-  @media (any-hover: hover) {
-    &:hover {
-      opacity: 1;
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
-
-  &:active {
-    opacity: 0.3;
-   }
-}
 }

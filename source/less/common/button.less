@@ -65,6 +65,17 @@
     @media(min-width: @tablet-width) {
       .font-params(20; 20);
     }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: @basic-yellow-dark;
+      }
+    }
+
+    &:active {
+      background-color: @basic-yellow-dark;
+      color: rgba(22, 28, 53, 0.3);
+     }
   }
 
   &--square {
