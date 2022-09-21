@@ -28,9 +28,9 @@
     display: grid;
     grid-template-columns: repeat(4, 285px);
     grid-template-areas:
-    "list-direction list-direction title-direction title-direction"
-    "list-direction list-direction text-direction text-direction"
-    "list-direction list-direction button-direction button-direction";
+      "list-direction list-direction title-direction title-direction"
+      "list-direction list-direction text-direction text-direction"
+      "list-direction list-direction button-direction button-direction";
     column-gap: 60px;
   }
 
@@ -162,10 +162,9 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 10px;
     grid-template-columns: 374px 186px;
-
   }
 
-  &:last-child{
+  &:last-child {
     margin-bottom: 0;
     position: relative;
 
@@ -179,7 +178,6 @@
         background-image: linear-gradient(to top, @basic-white, transparent 58%);
       }
     }
-
   }
 }
 

@@ -92,18 +92,14 @@
   flex-direction: column;
   align-items: center;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     padding: 0 40px;
     margin-top: -60px;
-
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
 
     border-radius: 0 0 60px 60px;
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     padding: 0 58px;
   }
 }
@@ -111,11 +107,11 @@
 .set-cross-platform-limits() {
   width: @fixed-mobile-screen;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     width: @fixed-tablet-screen;
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     width: @fixed-desktop-screen;
   }
 }
@@ -205,4 +201,3 @@
 .triangle-box-left(@size; @sub-size; @color: @special-blue) {
   .triangle(left; ~"@{size}px"; ~"@{sub-size}px"; @color);
 }
-

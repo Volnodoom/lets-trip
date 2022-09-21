@@ -14,7 +14,7 @@
 
 .modal-rates__container {
   .position-element(relative; top; 50%; left; 50%);
-  transform: translate(-50%; -50%);
+  transform: translate(-50%, -50%);
   width: 270px;
   z-index: 200;
 
@@ -23,14 +23,14 @@
 
   border-radius: 20px;
   background-color: @basic-white;
-  box-shadow: 0px 2px 8px rgba(29, 46, 91, 0.14);
+  box-shadow: 0 2px 8px rgba(29, 46, 91, 0.14);
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     width: ~"calc(100% - 80px)";
-    box-shadow: 0px 4px 22px rgba(29, 46, 91, 0.18);
+    box-shadow: 0 4px 22px rgba(29, 46, 91, 0.18);
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     width: 750px;
     border-radius: 30px;
   }
@@ -43,12 +43,12 @@
 
   text-align: center;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     padding: 54px 90px 0;
     margin-bottom: 47px;
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     padding: 54px 60px 0;
     margin-bottom: 46px;
   }
@@ -61,7 +61,7 @@
 
   line-height: 22px;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     min-width: 506px;
     margin: 0 auto;
     margin-bottom: 52px;
@@ -78,14 +78,14 @@
     }
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     width: 630px;
   }
 
-  &>.list-options__term {
+  & > .list-options__term {
     padding-top: 11px;
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       padding-top: 14px;
       padding-bottom: 13px;
 
@@ -96,16 +96,16 @@
       }
     }
 
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       padding-top: 12px;
       padding-bottom: 15px;
     }
   }
 
-  &>.list-options__definition {
+  & > .list-options__definition {
     padding-bottom: 11px;
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       padding-top: 14px;
       padding-bottom: 13px;
 
@@ -118,7 +118,7 @@
       }
     }
 
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       padding-top: 12px;
       padding-bottom: 15px;
     }
@@ -132,7 +132,7 @@
   background-color: @basic-grey-light-90;
   border-radius: 0 0 20px 20px;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     width: 100%;
     padding: 41px 20px;
   }
@@ -162,8 +162,7 @@
     opacity: 0.3;
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     border-radius: 0 0 30px 30px;
-
   }
 }
