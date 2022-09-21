@@ -1,5 +1,5 @@
 .list-options {
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     .font-params(28; 28);
 
     &::after {
@@ -14,7 +14,7 @@
     }
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     &::after {
       top: -51px;
       right: 111px;
@@ -27,12 +27,12 @@
   counter-increment: new-counter;
   position: relative;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 400px 163px;
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     grid-template-columns: 528px 285px;
   }
 
@@ -42,7 +42,7 @@
     }
   }
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     &:last-child {
       &::before {
         .create-rate-section-line(absolute; bottomLeft);
@@ -51,19 +51,19 @@
   }
 
   &:nth-of-type(3n+1) {
-    &::after{
+    &::after {
       background-color: @basic-orange;
     }
   }
 
   &:nth-of-type(3n+2) {
-    &::after{
+    &::after {
       background-color: @basic-yellow-dark;
     }
   }
 
   &:nth-of-type(3n+3) {
-    &::after{
+    &::after {
       background-color: @basic-yellow;
     }
   }
@@ -82,7 +82,7 @@
     content: counter(new-counter);
     .font-params(16; 16; 400);
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       top: 50%;
       transform: translateY(-50%);
       left: -90px;
@@ -105,11 +105,11 @@
   position: relative;
   padding-top: 14px;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     padding: 22px 0 18px;
   }
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     &::before {
       .create-rate-section-line(absolute; left);
     }
@@ -120,7 +120,7 @@
   position: relative;
   padding-bottom: 16px;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     padding: 22px 0 18px;
 
     text-align: right;
@@ -130,10 +130,8 @@
   &::after {
     .create-rate-section-line(absolute; bottomLeft);
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       display: none;
     }
   }
 }
-
-

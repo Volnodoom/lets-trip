@@ -4,14 +4,14 @@
   border-radius: 0;
   margin-top: 30px;
 
-  background-image:url(../../img/decor/globe-back-mobile.png);
+  background-image: url("../../img/decor/globe-back-mobile.png");
   background-repeat: no-repeat;
   background-position: top -94px center;
   background-origin: border-box;
   background-size: 320px auto;
 
   @media (min-resolution: 2dppx) {
-    background-image:url(../../img/decor/globe-back-mobile@2x.png);
+    background-image: url("../../img/decor/globe-back-mobile@2x.png");
   }
 
   @media (min-width: @tablet-width) {
@@ -19,26 +19,26 @@
     border-radius: 0;
     margin-top: 30px;
 
-    background-image:url(../../img/decor/globe-back-tablet.png);
+    background-image: url("../../img/decor/globe-back-tablet.png");
     background-position: top 220px center;
     background-size: 100% auto;
 
     @media (min-resolution: 2dppx) {
-      background-image:url(../../img/decor/globe-back-tablet@2.png);
+      background-image: url("../../img/decor/globe-back-tablet@2.png");
     }
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     margin-top: 0;
     margin-bottom: 70px;
 
-    background-image:url(../../img/decor/globe-back-desktop.png);
+    background-image: url("../../img/decor/globe-back-desktop.png");
     background-position: top -110px center;
     background-size: 1440px auto;
 
 
     @media (min-resolution: 2dppx) {
-      background-image:url(../../img/decor/globe-back-desktop@2.png);
+      background-image: url("../../img/decor/globe-back-desktop@2.png");
     }
   }
 
@@ -77,7 +77,8 @@
     margin: 0 auto;
     margin-bottom: 483px;
   }
-  @media(min-width: @desktop-width) {
+
+  @media (min-width: @desktop-width) {
     display: block;
     margin: 99px 0 0 69px;
     padding-right: 10px;
@@ -88,12 +89,12 @@
     .create-pseudo(absolute; top; 128; right; 23);
     .size(192; 255);
     z-index: -1;
-    background-image:url(../../img/decor/traveller-illustration-mobile.png);
+    background-image: url("../../img/decor/traveller-illustration-mobile.png");
     background-repeat: no-repeat;
     background-size: contain;
 
     @media (min-resolution: 2dppx) {
-      background-image:url(../../img/decor/traveller-illustration-mobile@2.png);
+      background-image: url("../../img/decor/traveller-illustration-mobile@2.png");
     }
 
     @media (min-width: @tablet-width) {
@@ -102,10 +103,10 @@
       right: 71px;
       .size(372; 451);
 
-      background-image:url(../../img/decor/traveller-illustration-tablet.png);
+      background-image: url("../../img/decor/traveller-illustration-tablet.png");
 
       @media (min-resolution: 2dppx) {
-        background-image:url(../../img/decor/traveller-illustration-tablet@2.png);
+        background-image: url("../../img/decor/traveller-illustration-tablet@2.png");
       }
     }
 
@@ -115,10 +116,10 @@
       right: 345px;
       .size(431; 640);
 
-      background-image:url(../../img/decor/traveller-illustration-desktop.png);
+      background-image: url("../../img/decor/traveller-illustration-desktop.png");
 
       @media (min-resolution: 2dppx) {
-        background-image:url(../../img/decor/traveller-illustration-desktop@2.png);
+        background-image: url("../../img/decor/traveller-illustration-desktop@2.png");
       }
     }
   }
@@ -204,7 +205,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
 
     position: absolute;
@@ -251,7 +252,7 @@
       }
     }
 
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       border-radius: 20px 0 0 20px;
 
       &::before {
@@ -264,12 +265,12 @@
   &:nth-child(4n+2) {
     background-color: @basic-orange-light;
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       margin: 0;
       border-radius: 10px 10px 0 0;
     }
 
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       border-radius: 20px 0 0 20px;
 
       &::before {
@@ -278,7 +279,7 @@
 
         display: block;
 
-        background-color:@basic-orange-light;
+        background-color: @basic-orange-light;
       }
     }
   }
@@ -349,8 +350,7 @@
     @media (min-width: @desktop-width) {
       left: initial;
       top: 29px;
-      right: 32px
+      right: 32px;
     }
   }
 }
-

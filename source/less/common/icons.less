@@ -5,7 +5,7 @@
     .size(18; 18);
 
     @media (min-width: @tablet-width) {
-    .size(27; 26);
+      .size(27; 26);
     }
   }
 
@@ -29,7 +29,7 @@
     .size(11; 21);
 
     @media (min-width: @tablet-width) {
-    .size(14; 28);
+      .size(14; 28);
     }
   }
 
@@ -37,7 +37,7 @@
     .size(23; 12);
 
     @media (min-width: @tablet-width) {
-    .size(31; 16);
+      .size(31; 16);
     }
   }
 
@@ -45,7 +45,7 @@
     .size(18; 18);
 
     @media (min-width: @tablet-width) {
-    .size(23; 24);
+      .size(23; 24);
     }
   }
 
@@ -60,7 +60,6 @@
       .size(32; 42);
     }
   }
-
 }
 
 .icon__header {
@@ -73,9 +72,7 @@
   @media (min-width: @desktop-width) {
     margin: 0;
   }
-}
 
-.icon__header {
   & .icon--telephone,
   & .icon--mail {
     color: @basic-yellow;
@@ -109,10 +106,11 @@
 
       &:active {
         background-color: @basic-orange-dark;
+
         .icon--mobile {
           opacity: 0.3;
         }
-       }
+      }
     }
 
     &--email-sent {
@@ -126,10 +124,11 @@
 
       &:active {
         background-color: @basic-orange;
+
         .icon--email {
           opacity: 0.3;
         }
-       }
+      }
     }
   }
 }
@@ -145,7 +144,7 @@
 
   &:active {
     opacity: 0.3;
-   }
+  }
 }
 
 .icon__welcome {
@@ -162,10 +161,11 @@
 
       &:active {
         background-color: @basic-orange-dark;
+
         .icon--mobile {
           opacity: 0.3;
         }
-       }
+      }
     }
 
     &.icon__round--email-sent {
@@ -180,10 +180,11 @@
 
       &:active {
         background-color: @basic-orange;
+
         .icon--email {
           opacity: 0.3;
         }
-       }
+      }
     }
   }
 }
@@ -219,7 +220,8 @@
 
   &.icon__round {
     background-color: @basic-blue-dark;
-    @media(min-width: @desktop-width) {
+
+    @media (min-width: @desktop-width) {
       .size(90; 90);
     }
   }
@@ -235,12 +237,12 @@
 
   @media (min-width: @desktop-width) {
     margin: 0 31px 0 0;
-
   }
 
   &.icon__round {
     background-color: @special-blue;
-    @media(min-width: @desktop-width) {
+
+    @media (min-width: @desktop-width) {
       .size(90; 90);
     }
   }
@@ -249,6 +251,7 @@
 .icon__footer {
   &.icon__round {
     background-color: @basic-yellow;
+
     @media (min-width: @desktop-width) {
       .size(68; 68);
     }
@@ -256,11 +259,11 @@
 
   &:link {
     background-color: @basic-yellow;
-   }
+  }
 
   &:visited {
     background-color: @basic-yellow;
-   }
+  }
 
   @media (any-hover: hover) {
     &:hover {
@@ -270,8 +273,7 @@
 
   &:active {
     background-color: @basic-yellow-dark;
-
-   }
+  }
 
   .icon--facebook,
   .icon--vkontakte,
