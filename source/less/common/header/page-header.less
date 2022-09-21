@@ -43,11 +43,9 @@
   }
 
   &.page-header__no-js {
-    .header-menu__list,
-    .header-menu__user-button,
-    .header-menu__contacts,
     .header-menu__socials {
-      display: block;
+      display: flex;
+      align-items: center;
     }
   }
 }
@@ -67,7 +65,7 @@
   }
 }
 
-.page-header:not(.page-header--expanded) {
+.page-header:not(.page-header--expanded):not(.page-header__no-js ) {
   .page-header__logo {
     &--light {
       display: block;
@@ -88,7 +86,7 @@
   }
 }
 
-.page-header:not(.page-header--expanded) {
+.page-header:not(.page-header--expanded):not(.page-header__no-js ) {
   .page-header__menu {
     position: absolute;
     top: 0;
@@ -123,7 +121,7 @@
   }
 }
 
-.page-header:not(.page-header--expanded) {
+.page-header:not(.page-header--expanded):not(.page-header__no-js ) {
   .header-menu__list,
   .header-menu__user-button,
   .header-menu__contacts,
@@ -146,7 +144,7 @@
   }
 }
 
-.page-header:not(.page-header--expanded) {
+.page-header:not(.page-header--expanded):not(.page-header__no-js ) {
   .header-menu__contacts{
     .icon--telephone,
     .icon--mail {

@@ -15,7 +15,7 @@
   <body>
     <a class="visually-hidden" href="#main">Перейти к контенту</a>
     <!-- header class could accept two extra classes page-header--expanded or page-header__no-js -->
-    <header class="page-header">
+    <header class="page-header page-header__no-js">
       <div class="page-header__container">
         <a class="page-header__logo page-header__logo--light">
           <picture>
@@ -192,11 +192,23 @@
               <ul class="welcome__list list-interaction">
                 <li class="welcome__list-item">
                   <span class="visually-hidden">Телефон организации</span>
-                  <a class="welcome__list-link welcome__list-link--mobile" href="tel:+79547080478"></a>
+                  <a class="welcome__list-link welcome__list-link--mobile" href="tel:+79547080478">
+                    <div class="icon__welcome icon__round icon__round--phone-call">
+                      <svg class="icon icon--mobile" xmlns="http://www.w3.org/2000/svg" width="19" heigh="19" viewBox="0 0 19 19">
+                        <use href="./img/sprite.svg#icon-mobile"></use>
+                      </svg>
+                    </div>
+                  </a>
                 </li>
                 <li class="welcome__list-item">
                   <span class="visually-hidden">Почта организации</span>
-                  <a class="welcome__list-link welcome__list-link--modern-mail" href="email:letstrip@tumbatumba.com"></a>
+                  <a class="welcome__list-link welcome__list-link--modern-mail" href="email:letstrip@tumbatumba.com">
+                    <div class="icon__welcome icon__round icon__round--email-sent">
+                      <svg class="icon icon--email" xmlns="http://www.w3.org/2000/svg" width="19" heigh="17" viewBox="0 0 19 17">
+                        <use href="./img/sprite.svg#icon-email"></use>
+                      </svg>
+                    </div>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -926,5 +938,6 @@
 
       </div>
     </footer>
+    <script src="./js/script.min.js"></script>
   </body>
 </html>
