@@ -140,7 +140,7 @@ const watcher = () => {
 
 // Build
 
-export const build = gulp.series(
+export const build = (done)= gulp.series(
   clean,
   copy,
   optimizeImages,
@@ -152,7 +152,7 @@ export const build = gulp.series(
     sprite,
     createWebp
   ),
-);
+) (done);
 
 // Default
 
