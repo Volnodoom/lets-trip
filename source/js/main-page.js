@@ -19,7 +19,22 @@ const handleBusinessOfferButtonClick = () => {
   businessOfferCloseButton.addEventListener('click', handleModalClose);
 };
 
+const handleScroll = () => {
+  const hasScrollClass = header.classList.contains('page-header__scroll')
+
+  if(window.pageYOffset > 0) {
+    if (!hasScrollClass) {
+      header.classList.add('page-header__scroll');
+    }
+  }
+
+  if(window.pageYOffset === 0) {
+    header.classList.remove('page-header__scroll');
+  }
+}
+
 burgerButton.addEventListener('click', handleBurgerClick);
 businessOfferOpenButton.addEventListener('click', handleBusinessOfferButtonClick);
+window.addEventListener('scroll', handleScroll)
 
 removeNoJs();
